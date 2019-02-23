@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>2048小游戏</title>
+  <style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	#gridPanel {
+		width:480px;
+		height:480px;
+		margin:20px auto;
+		background:#bbada0;
+		border-radius:10px;
+		padding-top:20px;
+		padding-left:20px;
+		position:relative;
+	}
+	.cell,.fcell {
+		width:100px;
+		height:100px;
+		border-radius:6px;
+		background:#ccc0b3;
+	}
+	.cell {
+		float:left;
+		margin-right:20px;
+		margin-bottom:20px;
+	}
+	.fcell {
+		line-height:100px;
+		text-align:center;
+		font-size:60px;
+		font-weight:bold;
+		position:absolute;
+	}
+	/*同一行单元格top值相等*/
+	#fc00,#fc01,#fc02,#fc03 {top:20px;}
+	#fc10,#fc11,#fc12,#fc13 {top:140px;}
+	#fc20,#fc21,#fc22,#fc23 {top:260px;}
+	#fc30,#fc31,#fc32,#fc33 {top:380px;}
+	/*同一列单元格left值相等*/
+	#fc00,#fc10,#fc20,#fc30 {left:20px;}
+	#fc01,#fc11,#fc21,#fc31 {left:140px;}
+	#fc02,#fc12,#fc22,#fc32 {left:260px;}
+	#fc03,#fc13,#fc23,#fc33 {left:380px;}
+	/*定义每个数字的背景色*/
+	.n2{background:#eee4da}
+	.n4{background:#ede0c8}
+	.n8{background:#f2b179}
+	.n16{background:#f59563}
+	.n32{background:#f67c5f}
+	.n64{background:#f65e3b}
+	.n128{background:#edcf72}
+	.n256{background:#edcc61}
+	.n512{background:#9c0}
+	.n1024{background:#33b5e5}
+	.n2048{background:#09c}
+	.n4096{background:#a6c}
+	.n8192{background:#93c}
+	/*设置特殊数字的大小*/
+	.n1024,.n2048,.n4096,.n8192{font-size:40px;}
+	/*设置特殊数字的颜色*/
+	.n8,.n16,.n32,.n64,.n128,.n256,.n512,.n1024,
+	.n2048,.n4096,.n8192 {color:#fff;}
+
+	p {
+		width:480px;
+		margin:30px auto 0 auto;
+		font-size:40px;
+		text-align:center;
+	}
+	#gameOver {
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display:none;
+	}
+	#gameOver div {
+		width:100%;
+		height:100%;
+		background:#555;
+		opacity:0.5;
+		-moz-opacity:0.5;
+		filter:alpha(Opacity=50);
+	}
+	#gameOver p {
+		position:absolute;
+		width:300px;
+		height:200px;
+		border:1px solid #edcf72;
+		background:#fff;
+		text-align:center;
+		font-size:30px;
+		color:#000;
+		border-radius:10px;
+		padding:30px 0 0 0;
+	}
+	.btn {
+		background:#9f8b77;
+		border-radius:6px;
+		color:#fff;
+		padding:10px;
+		cursor:pointer;
+		line-height:130px;
+	}
+  </style>
+ </head>
+ <body>
+	<p>Score: <span id="score">0</span></p>
+	<div id="gridPanel">
+		<div id="c00" class="cell"></div>
+		<div id="c01" class="cell"></div>
+		<div id="c02" class="cell"></div>
+		<div id="c03" class="cell"></div>
+
+		<div id="c10" class="cell"></div>
+		<div id="c11" class="cell"></div>
+		<div id="c12" class="cell"></div>
+		<div id="c13" class="cell"></div>
+
+		<div id="c20" class="cell"></div>
+		<div id="c21" class="cell"></div>
+		<div id="c22" class="cell"></div>
+		<div id="c23" class="cell"></div>
+
+		<div id="c30" class="cell"></div>
+		<div id="c31" class="cell"></div>
+		<div id="c32" class="cell"></div>
+		<div id="c33" class="cell"></div>
+		<!--前景，负责移动-->
+		<div id="fc00" class="fcell"></div>
+		<div id="fc01" class="fcell"></div>
+		<div id="fc02" class="fcell"></div>
+		<div id="fc03" class="fcell"></div>
+
+		<div id="fc10" class="fcell"></div>
+		<div id="fc11" class="fcell"></div>
+		<div id="fc12" class="fcell"></div>
+		<div id="fc13" class="fcell"></div>
+
+		<div id="fc20" class="fcell"></div>
+		<div id="fc21" class="fcell"></div>
+		<div id="fc22" class="fcell"></div>
+		<div id="fc23" class="fcell"></div>
+
+		<div id="fc30" class="fcell"></div>
+		<div id="fc31" class="fcell"></div>
+		<div id="fc32" class="fcell"></div>
+		<div id="fc33" class="fcell"></div>
+	</div>
+	<div id="gameOver">
+		<div><!--充当透明背景--></div>
+		<p><!--gameOver小窗口-->
+			Game Over！<br/>
+		    Score:<span id="finalScore"></span><br/>
+			<a id="restart" class="btn" onclick="game.restart()">Try Again！</a>
+		</p>
+		
+	</div>
+  <script type="text/javascript" src="animation.js"></script>
+  <script type="text/javascript" src="2048.js"></script>
+  <script>
+	game.start();
+	document.onkeydown=function(){
+		var evt=window.event||arguments[0];
+		if(game.state==game.PLAYING){
+			//alert(game.PLAYING)
+			//左移
+			if(evt.keyCode==37){//键盘左箭头 37
+				game.moveLeft();
+			}else if(evt.keyCode==39){//键盘右箭头 39
+				game.moveRight();
+			}else if(evt.keyCode==38){//键盘上箭头 38
+				game.moveUp();
+			}else if(evt.keyCode==40){//键盘下箭头 40
+				game.moveDown();
+			}
+			if(game.gameOver()){
+				game.state=game.GAME_OVER;
+				//step1:找到gameOver div
+				var gameOver=document.querySelector("#gameOver");
+				//step2:显示出来
+				gameOver.style.display="block";
+				//step3:修改finalScore总innerHTML
+				var finalScore=document.querySelector("#finalScore");
+				finalScore.innerHTML=game.score;
+				//step4:计算p元素的top和left
+				//left=(屏幕的宽度-p元素的宽度)/2
+				//top=(屏幕的高度-p元素的高度)/2
+				var p=document.querySelector("#gameOver p");
+				var pCSS=null;
+				if(p.currentStyle){
+					pCSS=p.currentStyle;
+				}else{
+					pCSS=getComputedStyle(p,null);
+				}
+				var width=parseInt(pCSS.width);
+				var height=parseInt(pCSS.height);
+				var screenWidth=window.innerWidth;
+				var screenHeight=window.innerHeight;
+				p.style.left=(screenWidth-width)/2+"px";
+				p.style.top=(screenHeight-height)/2-40+"px";
+				/*screen.availXXX  屏幕宽高，去除任务栏*/
+			}
+		}
+	}
+  </script>
+ </body>
+</html>

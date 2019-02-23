@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>右键菜单更换背景</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{background:url("images/5.jpg");}
+	
+	.menu{width:200px; height:250px; background:#fff; box-shadow:0 0 5px #fff; position:absolute; display:none;}
+	.menu ul li{width:200px; height:35px; list-style:none; border-bottom:1px solid #ddd; font-size:14px; color:#666; line-height:35px; text-indent:20px;/*缩进*/ cursor:pointer;}
+	.menu ul li img{margin:0 10px;}
+	.menu ul li:hover{background:#333; color:#fff;}
+
+	.huanfu{width:718px; height:358px; background:rgba(0,0,0,.5); margin:70px auto; display:none; overflow:hidden;}
+	.huanfu .title{width:718px; height:50px; background:#333; color:#fff;}
+	.huanfu .title .left{width:100px; height:50px; line-height:50px; float:left; margin:0 15px;}
+	.huanfu .title .right{width:30px; height:30px; line-height:30px; text-align:center; border-radius:15px; float:right; margin:10px 15px; background:#000; cursor:pointer;}
+	.huanfu .title .right:hover{background:#666;}
+	.huanfu ul li{list-style:none; width:200px; height:125px; float:left; margin:10px 15px; cursor:pointer; border:3px solid #fff;}
+  </style>
+ </head>
+ <body>
+  <div class="menu">
+	<ul>
+		<li><img src="images/ico1.jpg" align="absmiddle"/>添加应用</li>
+		<li><img src="images/ico2.jpg" align="absmiddle"/>获取课程</li>
+		<li><img src="images/ico3.jpg" align="absmiddle"/>添加笔记</li>
+		<li><img src="images/ico4.jpg" align="absmiddle"/>刷新</li>
+		<li><img src="images/ico5.jpg" align="absmiddle"/>上传资料</li>
+		<li><img src="images/ico6.jpg" align="absmiddle"/>更换背景</li>
+		<li><img src="images/ico7.jpg" align="absmiddle"/>注销</li>
+	</ul>
+  </div>
+
+  <div class="huanfu">
+	<div class="title">
+		<p class="left">桌面背景</p>
+		<p class="right">X</p>
+	</div>
+	<ul>
+		<li><img src="images/s_1.jpg"/></li>
+		<li><img src="images/s_2.jpg"/></li>
+		<li><img src="images/s_3.jpg"/></li>
+		<li><img src="images/s_4.jpg"/></li>
+		<li><img src="images/s_5.jpg"/></li>
+		<li><img src="images/s_6.jpg"/></li>
+	</ul>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		//禁止鼠标右键系统出现
+		document.oncontextmenu = function(){return false};
+		//启用鼠标右键
+		$(document).mousedown(function(e){
+			var key = e.which;
+			if(key == 3){
+				var top = e.clientY;
+				var left = e.clientX;
+				$(".menu").show().css({left:left,top:top});
+			}
+		});
+
+		$(document).click(function(){$(".menu").hide()});
+
+		$(".menu ul li").click(function(){
+			var index = $(this).index();
+			if(index == 0){
+				alert("添加应用");
+			}else if(index == 1){
+				alert("获取课程");
+			}else if(index == 2){
+				alert("添加笔记");
+			}else if(index == 3){
+				alert("刷新");
+			}else if(index == 4){
+				alert("上传资料");
+			}else if(index == 5){
+				$(".huanfu").show(function(){$(this).css("translate","scale(1) rotate(360deg)")});
+			}else if(index == 6){
+				alert("注销");
+			}
+		});
+
+		$("p.right").click(function(){$(".huanfu").hide(function(){$(this).css("translate","scale(0) rotate(360deg)")})});
+
+		$(".huanfu ul li img").click(function(e){
+			img = $(this).attr("src");
+			var bimg=img.replace(/s_/,"");//将“s_”替换成空
+				$("body").css("background","url("+bimg+")");
+				e.stopPropagation();
+		});
+	});
+  </script>
+ </body>
+</html>

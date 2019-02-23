@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>收钱吧</title>
+  <link href="imgs/favicon.ico" mce_href="imgs/favicon.ico" rel="icon" type="image/x-icon" />
+  <!-- 引入外部Bootstrap CSS文件 -->
+  <link href="css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="iconfont/iconfont.css">
+
+  <!-- 让 IE8- 支持html5新标签、CSS媒体查询 -->
+  <!--[if lt IE 9]>
+      <script src="js/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="js/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+  <!--Start 页面导航栏：navbar-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#my-navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <div class="navbar-brand">
+          <a href="index.html">
+            <img src="imgs/SQBLogo.jpg" alt="Brand"/>
+          </a>
+        </div>
+      </div>
+      <div class="navbar-nav nav navbar-left">
+        <a href="index.html">收钱吧</a>
+      </div>
+      <div class="navbar-collapse collapse" id="my-navbar-collapse">
+        <ul class="navbar-nav nav navbar-right">
+          <li><a href="index.html"><span class="icon iconfont">&#xe657;</span> 首页</a></li>
+          <li><a href="javascript:void(0);"><span class="icon iconfont">&#xf0038;</span> V1</a></li>
+          <li><a href="javascript:void(0);"><span class="icon iconfont">&#xe615;</span> 资质</a></li>
+          <li><a href="javascript:void(0);"><span class="icon iconfont">&#xe602;</span> 福利社</a></li>
+          <li><a href="javascript:void(0);"><span class="icon iconfont">&#xe605;</span> 开发者中心</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--End 页面导航栏：navbar-->
+
+  <!-- Start 页面轮播展示：carouse-->
+  <div class="carousel slide" id="ad" data-ride="carousel" data-interval="3000">
+    <!--必需：轮播广告内容-->
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="javascript:void(0)">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-8 col-md-push-1 col-lg-7 col-lg-push-2">
+                <img class="img-responsive" src="imgs/v1_poster.png" alt=""/>
+              </div>
+              <div class="col-xs-12 col-sm-4 col-md-3 summary1">
+                <h1 class="text-center" style="font-size:200%;">支付外卖神器</h1>
+                <h4 class="text-center" style="font-weight:200;font-size:160%;">
+                  收钱吧V1
+                  <small style="font-size:80%;color:#6a4703;">现货首发</small>
+                </h4>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="item">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-push-1 col-lg-7 col-lg-push-2">
+              <img class="img-responsive" style="margin: 0 auto;" src="imgs/1.png" alt=""/>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3 summary2">
+              <p class="sign pull-right">
+                <h4 style="line-height: 28px;">用钱吧</h4>
+                <img src="imgs/sign.png" alt=""/>
+              </p>
+              <div class="hidden-xs">
+                <h2 style="font-size:150%;">2.0版本 全新上市</h2>
+                <p>跟多优化功能，快来体验</p>
+                <p style="max-width: 158px; margin:0 auto 5px;"><a href="javascript:void(0)"><img class="img-responsive" src="imgs/downAppleApp.png" alt="苹果APP下载"/></a></p>
+                <p style="max-width: 158px; margin:0 auto 5px;"><a href="javascript:void(0)"><img class="img-responsive" src="imgs/downAndroidApp.png" alt="安卓APP下载"/></a></p>
+                <p>移动 营销 服务</p>
+                <p>服务商</p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--添加两个个小圆圈(引导器)，用于快速定位指定的广告-->
+    <ol class="carousel-indicators">
+      <li class="active" data-target="#ad" data-slide-to="0"></li>
+      <li data-target="#ad" data-slide-to="1"></li>
+    </ol>
+    <!--添加向左、向右的控制键-->
+    <a class="carousel-control left" href="#ad" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#ad" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+  <!-- End 页面轮播展示：carouse-->
+
+  <!--Start 页面主体内容：main-->
+  <div id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-unstyled list">
+            <li>
+              <img src="imgs/imagePayMehod.png" alt="">
+              <p>一站式支付方案</p><hr>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <img src="imgs/imageAlipay.png" alt=""/>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  支付宝钱包已拥有 <span style="color: red;">1.7亿</span> 用户，当面付正在引领线下门店支付的变革。
+                </div>
+              </div>
+             </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <img src="imgs/imageWeixin.png" alt=""/>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  微信用户已超 <span style="color: red;">7亿</span> ，扫码已潜移默化的融入到生活的方方面面。
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <img src="imgs/imageUnion.png" alt=""/>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  陆陆续续更多消费方式袭来，您还抵挡的住吗？
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-unstyled list">
+            <li>
+              <img src="imgs/imageGlobal.png" alt="">
+              <p>移动支付价值突显</p><hr>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <div class="text-icon">高效率</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  只需扫一扫，秒速搞定，还无需找零！
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <div class="text-icon">很方便</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  顾客钱不够？带手机就行，总有一种方式适合您！
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <div class="text-icon">很安全</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  现金不过手，安全到账！
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-unstyled list">
+            <li>
+              <img src="imgs/imageShort.png" alt="">
+              <p>传统收款弊端</p><hr>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                 <div class="text-icon">效率低</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  超市排队到天亮，上班排队到迟到，人多拥挤排队到狂躁！
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                 <div class="text-icon">客流失</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  找零钱费时间，服务慢照顾不周，久而久之口碑差！
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="row">
+                <div class="col-xs-12 col-sm-2">
+                  <div class="text-icon">有损失</div>
+                </div>
+                <div class="col-xs-12 col-sm-10">
+                  零钱收不全，假币认不出，收银太忙找错钱！
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid main-show">
+      <div class="row well">
+        <div class="col-xs-12 col-sm-5 col-sm-push-2">
+          <img class="img-responsive img-show" src="imgs/pay.png" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+          <h4 class="text">快速接入主流移动支付</h4>
+          <p>和【收钱吧】一起</p>
+          <p>从此更多优惠，更多生意机会</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-push-2">
+          <h4 class="text">新增收款码一扫即付</h4>
+          <p>和【收钱吧】一起</p>
+          <p>从此化繁至简，轻松赚钱</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+          <img class="img-responsive img-show" src="imgs/jizhang.png" alt="">
+        </div>
+      </div>
+      <div class="row well">
+        <div class="col-xs-12 col-sm-5 col-sm-push-2">
+          <img class="img-responsive img-show" src="imgs/huodong.png" alt="">
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+          <h4 class="text">会自动识别客户的聪明帮手</h4>
+          <p>和【收钱吧】一起</p>
+          <p>从此让您的客户成为您的朋友</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-5 col-sm-push-2">
+          <h4 class="text">超过200,000+商户<br/>和你共同的选择</h4>
+          <p>和【收钱吧】一起</p>
+          <p>从此收得多，赚得多</p>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <img class="img-show" src="imgs/guiji.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="text-center">我们的资质</h2>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/weixin.png" alt="">
+            <p>微信支付<br>线下收单渠道高级合作伙伴</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/lakala.png">
+            <p>拉卡拉<br>核心渠道合作伙伴</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/imageAlipay.png" alt="">
+            <p>支付宝<br>线下收单渠道最核心合作伙伴之一</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/imageqq.png" alt="">
+            <p>QQ钱包<br>授权服务商</p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-bottom: 30px;">
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/imagejd.png" alt="">
+            <p>京东钱包<br>授权服务商</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/imagebaidu.png" alt="">
+            <p>百度钱包<br>首批授权五星服务商</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/union.png" alt="">
+            <p>银联钱包<br>高级合作伙伴</p>
+          </div>
+        </div>
+        <div class="col-xs-10 col-xs-push-1 col-sm-5 col-sm-push-1 col-md-2 col-md-push-2">
+          <div class="qudao">
+            <img src="imgs/ok_card.png" alt="">
+            <p>联华ok卡<br>对外唯一受理合作渠道</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--End 页面主体内容：main-->
+
+  <!--Start 页面底部信息：footer-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 col-sm-push-1">
+          <h5>扫码下载APP</h5>
+          <img class="erweima" src="imgs/erweima.jpg" alt=""/>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+          <h5>联系我们</h5>
+          <p>400-668-5353</p>
+          <p>shouqianba@wosai-inc.com</p>
+          <p>上海普陀区中江路879弄天地软件园4号楼2楼</p>
+        </div>
+        <div class="col-xs-12 col-sm-4 col-sm-push-1">
+          <h5>我们的产品</h5>
+          <p>喔噻管理营销平台</p>
+          <p>收钱吧</p>
+          <p>UpayLib SDK</p>
+        </div>
+      </div>
+      <div class="text-center">
+        <p><img src="imgs/picp_bg.png" alt=""/></p>
+        <p>上海喔噻互联网科技有限公司</p>
+        <p>Copyright©2015 Wosai. All Rights Reserved 沪ICP备310107100041754</p>
+      </div>
+    </div>
+  </footer>
+  <!--Start 页面底部信息：footer-->
+
+<!-- 引入外部jQuery文件 -->
+<script src="js/jquery-1.11.3.js"></script>
+<!-- 引入外部Bootstrap JS 文件 -->
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

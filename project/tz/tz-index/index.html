@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>潭州学院官方平台</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{font-size:12px; font-family:"微软雅黑"; color:#666; background:#eeeff3;}
+	img{border:0;}
+	a{text-decoration:none;}
+
+	/*header start*/
+	.header{width:100%; height:70px; background:#15171f;}
+	.header .h_con{width:1180px; height:70px; margin:0 auto;}
+	.header .h_con .h_logo{width:220px; padding-top:16px; float:left;}
+	.header .h_con .h_nav{width:650px; height:70px; float:left;}
+	.header .h_con .h_nav ul li{list-style:none; float:left;}
+	.header .h_con .h_nav ul li a{display:block; color:#fff; padding:0 20px 0 20px; line-height:70px; font-size:14px; margin:0 5px 0 5px;}
+	.header .h_con .h_nav ul li a:hover{background:#323744;}
+	.header .h_con .h_search{width:160px; height:32px; border:1px solid #323744; float:left; background:#323744; margin-top:18px;}
+	.header .h_con .h_search:hover{border:1px solid #818997;}
+	.header .h_con .h_search .text{width:125px; height:32px; border:0; background:#323744; font-size:14px; font-family:"微软雅黑"; color:#fff; line-height:32px; padding-left:5px; float:left; outline:none;}
+	.header .h_con .h_search .btn{display:block; width:20px; height:20px; float:left; background:url("images/pe_icon.png") no-repeat -368px 0; margin-top:5px;}
+	.header .h_con .h_message{width:112px; height:70px; float:left; margin-left:34px;}
+	.header .h_con .h_message .info{width:52px; height:70px; float:left; position:relative;}
+	.header .h_con .h_message .info:hover{background:#323744}
+	.header .h_con .h_message .info a{display:block; width:22px; height:16px; background:url("images/pe_icon.png") no-repeat -368px -23px; margin:26px auto;}
+	.header .h_con .h_message .info span{display:block; width:5px; height:5px; background:#f00; border:1px solid #fff; border-radius:3px; position:absolute; top:23px; right:12px;}
+	.header .h_con .h_message .pic{width:60px; height:70px; float:left;}
+	.header .h_con .h_message .pic:hover{background:#323744}
+	.header .h_con .h_message .pic a{display:block; width:32px; height:32px; margin:20px auto;}
+	.header .h_con .h_message .pic a img{border-radius:16px;}
+	/*header end*/
+
+	/*banner start*/
+	.banner{width:100&; height:375px; background:url("images/banner.jpg") no-repeat top center;}
+	/*banner end*/
+
+	/*menu start*/
+	.menu{width:100%; height:110px; border-bottom:1px solid #d9dce1; background:#fff;}
+	.menu .m_con{width:1180px; height:110px; margin:0 auto;}
+	.menu .m_con .c_list{width:215px; height:80px; border-right:1px solid #d9dce1; margin-top:12px; margin-left:20px; float:left;}
+	.menu .m_con .c_list h2{font-size:18px; color:#5580fb; font-weight:500; line-height:36px;}
+	.menu .m_con .c_list ul li{list-style:none; float:left; margin-right:10px; line-height:22px;}
+	.menu .m_con .c_list ul li a{color:#333;}
+	.menu .m_con .c_list ul li a:hover{color:#5580fb;}
+	.menu .m_con .c_list_end{border:0;}
+	/*menu end*/
+
+	/*course start*/
+	.course{width:1180px; border-bottom:1px solid #d9dce1; margin:45px auto;}
+	.course .c_course{width:222px; height:185px; float:left; margin:0 6px; margin-bottom:20px;}
+	.course .c_course .c_con{width:222px; height:185px; position:relative;}
+	.course .c_course .caption{background:#5580fb; text-align:center; color:#fff; font-size:14px;}
+	.course .c_course .caption h2{padding-top:50px; font-size:24px; font-weight:500;}
+	.course .c_course .caption p{line-height:30px;}
+	.course .c_course .caption a{color:#fff;}
+	.course .c_course .c_li{/*搭建3D环境*/-webkit-transform-style:preserve-3d; -webkit-perspective:800px;}
+	.course .c_course .c_li:hover .c_shadow{display:block}
+	.course .c_course .c_li:hover .c_desc{display:block}
+	.course .c_course .c_li a{display:block; text-align:center; line-height:40px; color:#333; font-size:14px;}
+	.course .c_course .c_li a:hover{color:#5580fb;}
+	.course .c_course .c_li .c_shadow{width:222px; height:145px; background:#000; position:absolute; top:0; left:0; opacity:0.6; filter:alpha(opacity=60); display:none; /*-webkit-animation:cartoon 1s linear;*/}
+	@keyframes cartoon{0%,100%{-webkit-transform:translateZ(0px) rotateX(0deg)}30%{-webkit-transform:translateZ(10px)  rotateX(10deg)}60%{-webkit-transform:translateZ(10px) rotateX(-10deg)}}
+	.course .c_course .c_li .c_desc{width:222px; height:145px; position:absolute; top:0; left:0; color:#aaa; display:none;}
+	.course .c_course .c_li .c_desc p{padding-left:15px; line-height:24px;}
+	.course .c_course .c_li .c_desc .title{font-size:14px; color:#fff; padding-top:15px;}
+	.course .c_course .c_li .c_desc a{width:80px; height:30px; display:block; color:#fff; background:#5580fb; text-align:center; line-height:30px; margin:10px auto; font-size:14px; border-radius:3px;}
+	.clear{clear:both;}
+	.course .c_course .software{background:#5580fb;}
+	.course .c_course .profession{background:#7784a9;}
+	.course .c_course .language{background:#3faa77;}
+	.course .c_course .student{background:#6a9a36;}
+	/*course end*/
+
+	/*teams start*/
+	.teams{width:100%; background:#fff; padding:20px 0;}
+	/*teacher start*/
+	.teams .teacher{width:1180px; margin:0 auto; border-bottom:1px solid #d9dce1;}
+	.teams .teacher h2{font-size:24px; font-weight:500;}
+	.teams .teacher ul{width:1180px; height:252px; margin:0 auto;}
+	.teams .teacher ul li{width:216px; height:66px; float:left; list-style:none; margin:30px 10px;}
+	.teams .teacher ul li:hover{background:#efefef;}
+	.teams .teacher ul li a{width:66px; height:66px; display:block; float:left}
+	.teams .teacher ul li .t_desc{height:66px; float:left; padding:0px 15px; color:#333;}
+	.teams .teacher ul li .t_desc a{height:22px; width:120px; display:block; color:#5580fb; font-size:14px; line-height:22px;}
+	.teams .teacher ul li .t_desc p{line-height:20px;}
+	/*teacher end*/
+	/*student start*/
+	.teams .student{width:1180px; margin:0px auto; border-bottom:1px solid #d9dce1; padding:20px 0;}
+	.teams .student h2{font-size:24px; font-weight:500;}
+	.teams .student ul{width:1180px; height:320px; margin:0 auto;}
+	.teams .student ul li{width:216px; height:280px; float:left; list-style:none; margin:25px 10px; position:relative;}
+	.teams .student ul li:hover .s_desc{display:block; animation:animate 0.5s linear;}
+	@keyframes animate{0%,100%{transform:rotate(0deg)}30%{transform:rotate(-5deg)}60%{transform:rotate(5deg)}}
+	.teams .student ul li .s_desc{width:176px; height:240px; position:absolute; top:0; left:0; background:rgba(0,0,0,.6); color:#fff; padding:20px; display:none;}
+	.teams .student ul li .s_desc h3{font-size:24px; font-weight:500;}
+	.teams .student ul li .s_desc p{margin:20px auto; line-height:20px;}
+	.teams .student ul li .s_desc a{width:60px; height:60px; display:block; border-radius:30px; color:#fff; background:#5580fb; text-align:center; line-height:60px; margin:0 auto;}
+	/*student end*/
+	/*link start*/
+	.teams .link{width:1180px; margin:0 auto; padding-top:20px;}
+	.teams .link h2{font-size:24px; font-weight:500;}
+	.teams .link .l_txt{width:1180px; color:#8e949f; margin-top:20px;}
+	.teams .link .l_txt a{padding:0 10px; display:inline-block; line-height:30px; color:#8e949f; font-size:14px;}
+	.teams .link .l_txt a:hover{color:#5580fb;}
+	/*link end*/
+	/*teams end*/
+
+	/*footer start*/
+	.footer{width:100%; height:130px; background:#15171f; padding:30px 0;}
+	.footer .f_con{width:1180px; margin:0 auto;}
+	.footer .f_con .f_desc{float:left;}
+	.footer .f_con .f_desc dl{float:left; margin-right:40px;}
+	.footer .f_con .f_desc dl dt{font-size:18px; margin-bottom:15px;}
+	.footer .f_con .f_desc dl dd{line-height:25px;}
+	.footer .f_con .f_desc dl dd a{color:#51555d; font-size:14px;}
+	.footer .f_con .f_desc dl dd a:hover{color:#fff;}
+	.footer .f_con .f_desc dl dd .share{width:34px; height:34px; background:url("images/pe_icon.png") no-repeat; border-radius:17px; float:left; margin-right:5px;}
+	.footer .f_con .f_desc dl dd .s_wb{background-position:-227px -77px;}
+	.footer .f_con .f_desc dl dd .s_wb:hover{background-position:-227px -113px;}
+	.footer .f_con .f_desc dl dd .s_qq{background-position:-265px -77px;}
+	.footer .f_con .f_desc dl dd .s_qq:hover{background-position:-265px -113px;}
+	.footer .f_con .f_relation{width:365px; float:right;}
+	.footer .f_con .f_relation img{width:102px; height:127px; display:block; float:left;}
+	.footer .f_con .f_relation .r_specific{float:left; margin-left:20px;}
+	.footer .f_con .f_relation .r_specific .tel{font-size:24px; font-weight:500; color:#fff; margin-bottom:10px;}
+	.footer .f_con .f_relation .r_specific .time{font-size:14px; line-height:20px;}
+	.footer .f_con .f_relation .r_specific .online{font-size:14px; border:1px solid #333; border-radius:15px; text-align:center; line-height:30px; margin-top:20px;}
+	/*footer end*/
+
+	/*copy start*/
+	.copy{width:100%; height:54px; background:#191b24;}
+	.copy{text-align:center; line-height:54px; font-size:14px;}
+	/*copy end*/
+  </style>
+ </head>
+ <body>
+  
+ </body>
+	<!--header start-->
+	<div class="header">
+		<div class="h_con">
+			<div class="h_logo">
+				<a href="#"><img src="images/logo.png" alt="潭州学院" width="145" height="33"/></a>
+			</div>
+			<div class="h_nav">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li><a href="#">公开课</a></li>
+					<li><a href="#">活动</a></li>
+					<li><a href="#">讲师团队</a></li>
+					<li><a href="#">活动</a></li>
+				</ul>
+			</div>
+			<div class="h_search">
+				<input type="text" class="text"/>
+				<a href="#" class="btn"></a>
+			</div>
+			<div class="h_message">
+				<div class="info">
+					<a href="#"></a>
+					<span></span>
+				</div>
+				<div class="pic">
+					<a href="#"><img src="images/1.jpg" alt="头像" width="32" height="32"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--header end-->
+
+	<!--banner start-->
+	<div class="banner"></div>
+	<!--banner end-->
+
+	<!--menu start-->
+	<div class="menu">
+		<div class="m_con">
+			<div class="c_list">
+				<h2>软件学院</h2>
+				<ul>
+					<li><a href="#">网页制作</a></li>
+					<li><a href="#">Java</a></li>
+					<li><a href="#">微信二次开发</a></li>
+					<li><a href="#">C++</a></li>
+					<li><a href="#">Android</a></li>
+					<li><a href="#">iOS</a></li>
+					<li><a href="#">PHP</a></li>
+					<li><a href="#">游戏开发</a></li>
+				</ul>
+			</div>
+			<div class="c_list">
+				<h2>职业技能</h2>
+				<ul>
+					<li><a href="#">网络营销</a></li>
+					<li><a href="#">SEO</a></li>
+					<li><a href="#">淘宝美工</a></li>
+					<li><a href="#">影楼后期</a></li>
+					<li><a href="#">淘宝运营</a></li>
+				</ul>
+			</div>
+			<div class="c_list">
+				<h2>语言学习</h2>
+				<ul>
+					<li><a href="#">韩语</a></li>
+					<li><a href="#">日语</a></li>
+					<li><a href="#">泰语</a></li>
+					<li><a href="#">西班牙语</a></li>
+				</ul>
+			</div>
+			<div class="c_list">
+				<h2>中小学教育</h2>
+				<ul>
+					<li><a href="#">语文</a></li>
+					<li><a href="#">数学</a></li>
+					<li><a href="#">英语</a></li>
+					<li><a href="#">法语</a></li>
+				</ul>
+			</div>
+			<div class="c_list c_list_end">
+				<h2>兴趣爱好</h2>
+				<ul>
+					<li><a href="#">手工DIY</a></li>
+					<li><a href="#">乐器</a></li>
+					<li><a href="#">人际关系</a></li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+	<!--menu end-->
+
+	<!--course(software) start-->
+	<div class="course">
+		<div class="c_course">
+			<div class="c_con caption software">
+				<h2>软件培训</h2>
+				<p>（20们课程）</p>
+				<a href="#">查看更多&gt;&gt;</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/1.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/2.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/3.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/4.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/5.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/6.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/7.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/8.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/9.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--course(software) end-->
+
+	<!--course(profession) start-->
+	<div class="course">
+		<div class="c_course">
+			<div class="c_con caption profession">
+				<h2>职业培训</h2>
+				<p>（20们课程）</p>
+				<a href="#">查看更多&gt;&gt;</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/1.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/2.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/3.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/4.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/5.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/6.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/7.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/8.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/9.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--course(profession) end-->
+
+	<!--course(language) start-->
+	<div class="course">
+		<div class="c_course">
+			<div class="c_con caption language">
+				<h2>语言培训</h2>
+				<p>（20们课程）</p>
+				<a href="#">查看更多&gt;&gt;</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/1.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/2.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/3.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/4.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--course(language) end-->
+
+	<!--course(student) start-->
+	<div class="course">
+		<div class="c_course">
+			<div class="c_con caption student">
+				<h2>中小学培训</h2>
+				<p>（20们课程）</p>
+				<a href="#">查看更多&gt;&gt;</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/1.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/2.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/3.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="c_course">
+			<div class="c_con c_li">
+				<img src="images/course/4.jpg" alt="ps课程" width="222" height="145"/>
+				<div class="c_shadow"></div>
+				<div class="c_desc">
+					<p class="title">零基础到精基础到高级</p>
+					<p>讲师：Arry</p>
+					<p>报名人数：3556</p>
+					<a href="#">查看详情</a>
+				</div>
+				<a href="#">ps零基础到精基础到高级</a>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<!--course(student) end-->
+	
+	<!--teams start-->
+	<div class="teams">
+		<!--teacher start-->
+		<div class="teacher">
+			<h2>讲师团队</h2>
+			<ul>
+				<li>
+					<a href="#"><img src="images/teams/t1.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t2.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t4.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t6.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t1.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t1.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t2.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t4.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t6.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+				<li>
+					<a href="#"><img src="images/teams/t1.jpg" alt="Arry老师" width="66" height="66"/></a>
+					<div class="t_desc">
+						<a href="#">Arry老师</a>
+						<p>潭州软件学院创始人</p>
+						<p>关注：999999+</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--teacher end-->
+		<!--student start-->
+		<div class="student">
+			<h2>学员动态</h2>
+			<ul>
+				<li>
+					<img src="images/teams/xy1.jpg" width="216" height="280"/>
+					<div class="s_desc">
+						<h3>欧巴</h3>
+						<p>
+							欧巴，韩语中“哥哥”的意思。欧巴在韩国是尊称，也是很亲密的男女之间的称呼。常见于韩剧，女生对男生称欧巴。
+						</p>
+						<a href="#">详情</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/teams/xy2.jpg" width="216" height="280"/>
+					<div class="s_desc">
+						<h3>欧巴</h3>
+						<p>
+							欧巴，韩语中“哥哥”的意思。欧巴在韩国是尊称，也是很亲密的男女之间的称呼。常见于韩剧，女生对男生称欧巴。
+						</p>
+						<a href="#">详情</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/teams/xy3.jpg" width="216" height="280"/>
+					<div class="s_desc">
+						<h3>欧巴</h3>
+						<p>
+							欧巴，韩语中“哥哥”的意思。欧巴在韩国是尊称，也是很亲密的男女之间的称呼。常见于韩剧，女生对男生称欧巴。
+						</p>
+						<a href="#">详情</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/teams/xy4.jpg" width="216" height="280"/>
+					<div class="s_desc">
+						<h3>欧巴</h3>
+						<p>
+							欧巴，韩语中“哥哥”的意思。欧巴在韩国是尊称，也是很亲密的男女之间的称呼。常见于韩剧，女生对男生称欧巴。
+						</p>
+						<a href="#">详情</a>
+					</div>
+				</li>
+				<li>
+					<img src="images/teams/xy5.jpg" width="216" height="280"/>
+					<div class="s_desc">
+						<h3>欧巴</h3>
+						<p>
+							欧巴，韩语中“哥哥”的意思。欧巴在韩国是尊称，也是很亲密的男女之间的称呼。常见于韩剧，女生对男生称欧巴。
+						</p>
+						<a href="#">详情</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<!--student end-->
+		<!--link start-->
+		<div class="link">
+			<h2>友情链接</h2>
+			<div class="l_txt">
+				<a href="#">YY直播</a>|<a href="#">高考派</a>|<a href="#">学习方法网</a>|<a href="#">高分网</a>|<a href="#">VOA英语学习网</a>|<a href="#">英语单词表</a>|<a href="#">校导网</a>|<a href="#">四六级英语</a>|<a href="#">雅思考试</a>|<a href="#">托福考试</a>|<a href="#">播种网</a>|<a href="#">环球北美考试院</a>|<a href="#">环球雅思</a>|<a href="#">六一儿童网</a>|<a href="#">可可英语</a>|<a href="#">托福论坛</a>|<a href="#">教育城</a>
+			</div>
+		</div>
+		<!--link end-->
+	</div>
+	<!--teams end-->
+	
+	<!--footer start-->
+	<div class="footer">
+		<div class="f_con">
+			<div class="f_desc">
+				<dl>
+					<dt>关于潭州</dt>
+					<dd><a href="#">了解潭州</a></dd>
+					<dd><a href="#">加入潭州</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+				</dl>
+				<dl>
+					<dt>学习资讯</dt>
+					<dd><a href="#">学院课程</a></dd>
+					<dd><a href="#">就业指南</a></dd>
+				</dl>
+				<dl>
+					<dt>服务中心</dt>
+					<dd><a href="#">安卓APP</a></dd>
+					<dd><a href="#">IOS APP</a></dd>
+				</dl>
+				<dl>
+					<dt>关注我们</dt>
+					<dd>
+						<a href="#" class="share s_wb"></a>
+						<a href="#" class="share s_qq"></a>
+					</dd>
+				</dl>
+			</div>
+			<div class="f_relation">
+				<img src="images/weixin.png" alt="潭州官方微信" width="102" height="127"/>
+				<div class="r_specific">
+					<p class="tel">400-009-6359</p>
+					<p class="time">周一至周六 9:30-23:00</p>
+					<p class="time">（仅收市话费）</p>
+					<p class="online">24小时在线客服</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--foorer end-->
+
+	<!--copy start-->
+	<div class="copy">
+		<p>Copyright &copy; 2013-2014 www.mooncollege.cn All Rights Reserved 版权所有：湖南潭州教育咨询有限公司 备案号:备13016338号</p>
+	</div>
+	<!--copy end-->
+</html>

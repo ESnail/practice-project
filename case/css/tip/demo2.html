@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{font-size:12px; font-family:"微软雅黑";}
+	a{text-decoration:none;}
+	ul li{list-style:none;}
+
+	.nav{width:646px; height:28px; margin:70px auto 20px auto; background:pink; position:relative;}
+	.nav ul li{height:28px; float:left;}
+	.nav ul li a{color:#333; display:inline-block; line-height:28px; padding:0 18px; font-size:14px; font-weight:600;}
+	.nav ul li a:hover{color:#e3224a; }
+	.nav .line{width:28px; height:28px; border-bottom:2px solid #e3224a; position:absolute; top:0; left:18px; z-index:-1;}
+
+	.show{width:1040px; height:353px; border:1px solid #666; margin:50px auto; padding:5px;}
+	.show figure{width:240px; height:333px; float:left; background:pink; padding:10px; position:relative;}
+	.show figure img{border:none; transition:all 0.3s ease-in-out;}
+	.show figure img:hover{transform:scale(0.9); transition:all 0.3s ease-in-out;}
+	.show figure figcaption{height:30px; background:yellow;}
+	.show figure figcaption p{text-indent:10px; line-height:30px; font-size:14px;}
+	.show figure .line{width:241px; height:334px; position:absolute; top:10px; left:10px; opacity:0; transition:all 1s ease;}
+	.show figure .top{border-top:2px solid red; transform-origin:0 0; transform:scale(0,1);}
+	.show figure .right{border-right:2px solid red; transform-origin:right bottom; transform:scale(1,0);}
+	.show figure .bottom{border-bottom:2px solid red; transform-origin:right 0; transform:scale(0,1);}
+	.show figure .left{border-left:2px solid red; transform-origin:left 0; transform:scale(1,0);}
+	.show figure:hover .line{cursor:pointer; transform:scale(1,1); transition:all 1s ease; opacity:1;}
+  </style>
+ </head>
+ <body>
+	<div class="nav">
+		<ul>
+			<li><a href="javascript:void(0)">瓷妆</a></li>
+			<li><a href="javascript:void(0)">美白</a></li>
+			<li><a href="javascript:void(0)">补水</a></li>
+			<li><a href="javascript:void(0)">淡斑</a></li>
+			<li><a href="javascript:void(0)">祛痘</a></li>
+			<li><a href="javascript:void(0)">去黑头</a></li>
+			<li><a href="javascript:void(0)">新品</a></li> 
+			<li><a href="javascript:void(0)">瓷肌品牌</a></li> 
+			<li><a href="javascript:void(0)">口碑中心</a></li>
+		</ul>
+		<div class="line"></div>
+	</div>
+
+	<div class="show">
+		 <figure>
+			<img src="images/10.jpg"/>
+			<figcaption>
+				<p>瓷肌晶透雪肌洁面乳</p>
+			</figcaption>
+			<div class="line top"></div>
+			<div class="line right"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+		  </figure>
+		  <figure>
+			<img src="images/11.jpg"/>
+			<figcaption>
+				<p>瓷肌净透卸妆啫喱</p>
+			</figcaption>
+			<div class="line top"></div>
+			<div class="line right"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+		  </figure>
+		  <figure>
+			<img src="images/12.jpg"/>
+			<figcaption>
+				<p>黄金蜗牛润唇套装（无色）</p>
+			</figcaption>
+			<div class="line top"></div>
+			<div class="line right"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+		  </figure>
+		  <figure>
+			<img src="images/13.jpg"/>
+			<figcaption>
+				<p>瓷肌透明质酸水感面膜</p>
+			</figcaption>
+			<div class="line top"></div>
+			<div class="line right"></div>
+			<div class="line bottom"></div>
+			<div class="line left"></div>
+		  </figure>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		
+		$(".nav ul li").hover(function(){
+			var awidth = $(this).find("a").width();
+			//var liwidth = $(this).prev().width();
+			//alert(width);
+			var index = $(this).index();
+			var width = 0;
+			var liwidth = 0;
+			//获取滑动上去列的前面的宽度
+			for(var i=0; i<index; i++){
+				liwidth = $(".nav ul li").eq(i).width();
+				width += liwidth;
+			}
+			$(".nav .line").stop(true,true).animate({"width":awidth,"left":width+18+"px"},300);		
+		})
+	})
+  </script>
+ </body>
+</html>

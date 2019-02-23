@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>潭州平台后台管理中心</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{font:12px "微软雅黑"; color:#666;}
+	a{text-decoration:none;}
+	ul li{list-style:none;}
+
+	.tz_content{width:100%; background:#282828;}
+	/*t_left start*/
+	.tz_content .t_left{width:200px; height:100%; background:#282828; position:fixed; top:0; left:0; z-index:2;}
+	.tz_content .t_left .l_logo{width:100%; height:108px; border-bottom:1px solid #000; background:url("images/logo.png") no-repeat center;}
+	.tz_content .t_left .l_nav{width:100%; border-bottom:1px solid #414141;}
+	.tz_content .t_left .l_nav li{width:100%; border-top:1px solid #414141; border-bottom:1px solid #000; line-height:52px;}
+	.tz_content .t_left .l_nav li:hover{background:#28b779}
+	.tz_content .t_left .l_nav li a{display:block;}
+	.tz_content .t_left .l_nav li a i{width:18px; height:18px; display:block; background:url("images/ht_icon.png") no-repeat; float:left; margin-top:20px; margin-left:30px;}
+	.tz_content .t_left .l_nav li a i.icon_1{background-position:-233px -52px;}
+	.tz_content .t_left .l_nav li a i.icon_2{background-position:-253px -52px;}
+	.tz_content .t_left .l_nav li a i.icon_3{background-position:-211px -52px;}
+	.tz_content .t_left .l_nav li a i.icon_4{background-position:-273px -52px;}
+	.tz_content .t_left .l_nav li a i.icon_5{background-position:-293px -52px;}
+	.tz_content .t_left .l_nav li a i.icon_6{background-position:-316px -48px;}
+	.tz_content .t_left .l_nav li a span{font-size:14px; color:#fff; padding-left:10px;}
+	/*t_left end*/
+	
+	/*t_header start*/
+	.tz_content .t_header{height:56px; background:#2f3437; overflow:hidden; position:relative; z-index:1;}
+	.tz_content .t_header .h_nav{height:56px; border-left:#000; border-right:#414141; float:left; margin-left:200px;}
+	.tz_content .t_header .h_nav li{width:90px; height:56px; float:left; border-left:1px solid #414141; border-right:1px solid #000; color:#838383;}
+	.tz_content .t_header .h_nav li.n_first{color:#fff;}
+	.tz_content .t_header .h_nav li:hover{color:#fff;}
+	.tz_content .t_header .h_nav li a{display:block; text-align:center;}
+	.tz_content .t_header .h_nav li a i{width:18px; height:18px; display:block; background:url("images/ht_icon.png") no-repeat; margin:10px auto 3px auto;}
+	.tz_content .t_header .h_nav li a i.icon1{background-position:0 -25px;}
+	.tz_content .t_header .h_nav li a i.icon2{background-position:-24px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon2{background-position:-24px -25px;}
+	.tz_content .t_header .h_nav li a i.icon3{background-position:-48px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon3{background-position:-48px -25px;}
+	.tz_content .t_header .h_nav li a i.icon4{background-position:-68px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon4{background-position:-68px -25px;}
+	.tz_content .t_header .h_nav li a i.icon5{background-position:-91px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon5{background-position:-91px -25px;}
+	.tz_content .t_header .h_nav li a i.icon6{background-position:-113px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon6{background-position:-113px -25px;}
+	.tz_content .t_header .h_nav li a i.icon7{background-position:-133px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon7{background-position:-133px -25px;}
+	.tz_content .t_header .h_nav li a i.icon8{background-position:-152px 0;}
+	.tz_content .t_header .h_nav li:hover i.icon8{background-position:-152px -25px;}
+	.tz_content .t_header .h_info{width:300px; height:56px; float:right; position:absolute; top:0; right:10px;}
+	.tz_content .t_header .h_info .user{color:#fff; float:left; line-height:56px;}
+	.tz_content .t_header .h_info .quit{width:65px; height:30px; background:#28b779; margin:13px 15px 0 0; float:right;}
+	.tz_content .t_header .h_info .quit a{display:block; line-height:30px; color:#fff; padding-left:10px;}
+	.tz_content .t_header .h_info .quit a span{float:left;}
+	.tz_content .t_header .h_info .quit a i{width:14px; height:14px; display:block; background:url("images/ht_icon.png") no-repeat 0 -51px; float:left; margin: 6px 8px;}
+	/*t_header end*/
+	
+	/*t_right start*/
+	.tz_content .t_right{height:100%; margin-left:200px; background:#f3f4f5; padding-bottom:50px;}
+	.tz_content .t_right .r_location{width:100%; height:51px; background:#e5e5e5; border-bottom:1px solid #ccc; line-height:51px;}
+	.tz_content .t_right .r_location i{width:14px; height:18px; display:block; background:url("images/ht_icon.png") no-repeat -16px -51px; margin:16px 10px 0 25px; float:left;}
+	/*t_right r_message start*/
+	.tz_content .t_right .r_message{width:100%;}
+	.tz_content .t_right .r_message .m_list{height:99px; float:left; margin-left:1%; margin-top:20px;}
+	.tz_content .t_right .r_message .m_list:hover{background:#2f3437;}
+	.tz_content .t_right .r_message .m_1{width:22%; background:#27a9e3;}
+	.tz_content .t_right .r_message .m_2{width:16%; background:#28b779;}
+	.tz_content .t_right .r_message .m_3{width:17%; background:#ffb848;}
+	.tz_content .t_right .r_message .m_4{width:21%; background:#cc6a6a;}
+	.tz_content .t_right .r_message .m_5{width:18%; background:#2255a4;}
+	.tz_content .t_right .r_message .m_6{width:17%; background:#da542e;}
+	.tz_content .t_right .r_message .m_7{width:20%; background:#2255a4;}
+	.tz_content .t_right .r_message .m_8{width:18%; background:#6297bc;}
+	.tz_content .t_right .r_message .m_9{width:20%; background:#27a9e3;}
+	.tz_content .t_right .r_message .m_10{width:19%; background:#28b779;}
+	.tz_content .t_right .r_message .m_list .l_pic{width:44px; height:55px; background:url("images/ht_icon.png") no-repeat; float:left; margin:25px 10px 0 20%;}
+	.tz_content .t_right .r_message .m_list .l_desc{color:#fff; margin-top:22px;}
+	.tz_content .t_right .r_message .m_list .l_desc span{font-size:24px;}
+	.tz_content .t_right .r_message .m_1 .l_pic{background-position:0 -76px;}
+	.tz_content .t_right .r_message .m_2 .l_pic{background-position:-46px -76px;}
+	.tz_content .t_right .r_message .m_3 .l_pic{background-position:-96px -72px;}
+	.tz_content .t_right .r_message .m_4 .l_pic{background-position:-146px -76px;}
+	.tz_content .t_right .r_message .m_5 .l_pic{background-position:-190px -77px;}
+	.tz_content .t_right .r_message .m_6 .l_pic{background-position:-239px -76px;}
+	.tz_content .t_right .r_message .m_7 .l_pic{background-position:-288px -74px;}
+	.tz_content .t_right .r_message .m_8 .l_pic{background-position:-342px -74px;}
+	.tz_content .t_right .r_message .m_9 .l_pic{background-position:-395px -74px;}
+	.tz_content .t_right .r_message .m_10 .l_pic{background-position:-449px -74px;}
+	/*清除浮动*/
+	.clear{clear:both;}
+	/*t_right r_message end*/
+	/*t_right r_table start*/
+	.tz_content .t_right .r_table{margin-left:1%; margin-top:20px; margin-right:1.25%; border:1px solid #ccc; background:#fff;}
+	.tz_content .t_right .r_table .t_title{width:100%; height:40px; background:#eee; border:1px solid #ccc;}
+	.tz_content .t_right .r_table .t_title i{width:16px; height:14px; display:block; border:1px; solid red; background:url("images/ht_icon.png") no-repeat -387px -16px; float:left; margin:12px;}
+	.tz_content .t_right .r_table .t_title p{height:40px; line-height:40px; border-left:1px solid #ccc; color:#000; float:left; padding-left:5px;}
+	.tz_content .t_right .r_table .t_label{width:80%; float:left;}
+	.tz_content .t_right .r_table .t_label ul li{height:32px; float:left; background:#999; margin:10px 15px 0 10px;}
+	.tz_content .t_right .r_table .t_label ul li:hover{background:#28b779}
+	.tz_content .t_right .r_table .t_label ul li a{display:block; padding:8px 20px; color:#fff;}
+	.tz_content .t_right .r_table .t_label ul li a i{width:16px; height:16px; display:block; background:url("images/ht_icon.png") no-repeat; float:left; margin-right:10px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon1{background-position:-33px -52px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon2{background-position:-50px -50px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon3{background-position:-67px -52px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon4{background-position:-87px -52px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon5{background-position:-105px -52px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon6{background-position:-123px -50px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon7{background-position:-140px -50px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon8{background-position:-155px -50px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon9{background-position:-172px -50px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon10{background-position:-192px -52px;}
+	.tz_content .t_right .r_table .t_label ul li a i.l_icon11{background-position:-212px -52px;}
+	.tz_content .t_right .r_table .t_search{width:20%; height:30px; float:right; margin-top:10px;}
+	.tz_content .t_right .r_table .t_search .s_txt{width:73%; height:28px; line-height:28px; border:none; outline:none; border:1px solid #ccc; float:left;}
+	.tz_content .t_right .r_table .t_search .s_btn{width:22%; height:30px; background:#999; color:#fff; border:0; cursor:pointer; outline:none;}
+	/*t_right r_table t_table start*/
+	.tz_content .t_right .r_table .t_table{width:98%; margin:20px 1%;}
+	.tz_content .t_right .r_table .t_table table{width:100%; border-collapse:collapse;}
+	.tz_content .t_right .r_table .t_table table thead{border:1px solid #ddd;}
+	.tz_content .t_right .r_table .t_table table tr th{background:#eee; line-height:40px;}
+	.tz_content .t_right .r_table .t_table table tbody tr:hover{background:#dfdfdf;}
+	.tz_content .t_right .r_table .t_table table tbody tr:hover .t_action{display:block;}
+	.tz_content .t_right .r_table .t_table table tbody tr td{border:1px solid #ddd; line-height:40px; text-align:center;}
+	.tz_content .t_right .r_table .t_table table tbody tr .t_td{width:120px;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action{width:108px; height:24px; margin:0 auto; display:none;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action a{width:24px; height:24px; display:block; background:url("images/ht_icon.png") no-repeat; float:left; margin:0 1px 0 2px;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action a:hover{background-color:#2f3437;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action .a_see{background-position:-359px -45px;; background-color:#6297bc;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action .a_edit{background-position:-379px -47px; background-color:#27a9e3;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action .a_save{background-position:-398px -47px; background-color:#28b779;}
+	.tz_content .t_right .r_table .t_table table tbody tr td .t_action .a_del{background-position:-417px -48px; background-color:#ff912f;}
+	/*t_right r_table t_table end*/
+	/*t_right r_table end*/
+	/*t_right end*/
+	
+	
+
+	/*响应式布局*/
+	/*当屏幕的分辨率为1360时*/
+	@media screen and (max-width:1360px){
+		/*.t_header h_nav start*/
+		.tz_content .t_header .h_nav li{width:80px;}
+		/*.t_header h_nav end*/
+		
+		/*.t_right start*/
+		.tz_content .t_right .r_message .m_list .l_pic{display:none;}
+		.tz_content .t_right .r_message .m_list .l_desc{text-align:center;}
+		.tz_content .t_right .r_table .t_label ul li{margin:10px 3px 0 10px;}
+		.tz_content .t_right .r_table .t_label ul li a{padding:8px 15px;}
+		/*.t_right end*/
+	}
+	/*当屏幕的分辨率为1024时*/
+	@media screen and (max-width:1024px){
+		/*t_left start*/
+		.tz_content .t_left{width:50px;}
+		.tz_content .t_left .l_logo{height:54px; background:url("images/logo1.png") no-repeat center;}
+		.tz_content .t_left .l_nav li a{height:52px;}
+		.tz_content .t_left .l_nav li a i{margin-left:15px;}
+		.tz_content .t_left .l_nav li a span{display:none;}	
+		/*end t_left*/
+
+		/*t_header start*/
+		.tz_content .t_header .h_nav{margin-left:50px;}
+		.tz_content .t_header .h_nav li{width:60px;}
+		.tz_content .t_header .h_nav li a span{display:none;}
+		.tz_content .t_header .h_nav li a i{margin:20px auto;}
+		.tz_content .t_header .h_info .user{display:none;}
+		/*t_header end*/
+		
+		/*t_right start*/
+		.tz_content .t_right{margin-left:50px;}
+		/*t_right end*/
+	}
+  </style>
+ </head>
+
+ <body>
+  <div class="tz_content">
+	<!--t_left start-->
+	<div class="t_left">
+		<div class="l_logo"></div>
+		<ul class="l_nav">
+			<li><a href="#"><i class="icon_1"></i><span>所有元素</span></a></li>
+			<li><a href="#"><i class="icon_2"></i><span>表格表单类</span></a></li>
+			<li><a href="#"><i class="icon_3"></i><span>标签按钮类</span></a></li>
+			<li><a href="#"><i class="icon_4"></i><span>日历类</span></a></li>
+			<li><a href="#"><i class="icon_5"></i><span>TAB轮换</span></a></li>
+			<li><a href="#"><i class="icon_6"></i><span>其他元素</span></a></li>
+		</ul>
+	</div>
+	<!--t_left end-->
+	<!--t_header start-->
+	<div class="t_header">
+		<ul class="h_nav">
+			<li class="n_first"><a><i class="icon1"></i><span>首页</span></a></li>
+			<li><a><i class="icon2"></i><span>界面管理</span></a></li>
+			<li><a><i class="icon3"></i><span>栏目管理</span></a></li>
+			<li><a><i class="icon4"></i><span>内容管理</span></a></li>
+			<li><a><i class="icon5"></i><span>用户管理</span></a></li>
+			<li><a><i class="icon6"></i><span>论坛中心</span></a></li>
+			<li><a><i class="icon7"></i><span>应用中心</span></a></li>
+			<li><a><i class="icon8"></i><span>工具</span></a></li>
+		</ul>
+		<div class="h_info">
+			<p class="user">当前用户：XXX，身份：系统管理员</p>
+			<div class="quit">
+				<a><span>退出</span><i></i></a>
+			</div>
+		</div>
+	</div>
+	<!--t_header end-->
+	<!--t_right start-->
+		<div class="t_right">
+			<div class="r_location">
+				<i></i>
+				<p>您当前所在位置：首页 > 后台中心</p>
+			</div>
+			<div class="r_message">
+				<div class="m_list m_1">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_2">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_3">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_4">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_5">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_6">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_7">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_8">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_9">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="m_list m_10">
+					<div class="l_pic"></div>
+					<div class="l_desc">
+						<span>2450</span>
+						<p>所有用户数</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!--r_table start-->
+			<div class="r_table">
+				<div class="t_title">
+					<i></i>
+					<p>表格表单类</p>
+				</div>
+				<div class="t_label">
+					<ul>
+						<li>
+							<a href="#"><i class="l_icon1"></i><span>添加</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon2"></i><span>编辑</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon3"></i><span>添加章节</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon4"></i><span>上传资料</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon5"></i><span>置顶</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon6"></i><span>取消置顶</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon7"></i><span>生成静态页面</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon8"></i><span>删除</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon9"></i><span>审核信息</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon10"></i><span>刷新数据</span></a>
+						</li>
+						<li>
+							<a href="#"><i class="l_icon11"></i><span>标记</span></a>
+						</li>
+					</ul>
+				</div>
+				<div class="t_search">
+					<input class="s_txt" type="text">
+					<input class="s_btn" type="button" value="GO"></a>
+				</div>
+				<div class="clear"></div>
+				<div class="t_table">
+					<table>
+						<thead>
+							<tr>
+								<th>11</th>
+								<th>ID</th>
+								<th>标题</th>
+								<th>发布者</th>
+								<th>点击数</th>
+								<th>类型</th>
+								<th>发布时间</th>
+								<th>置顶</th>
+								<th>静态化</th>
+								<th>评论</th>
+								<th>状态</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						</tbody>
+							<tr>
+								<td>111</td>
+								<td>007</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td>006</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td>003</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td>005</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td>002</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td>111</td>
+								<td>009</td>
+								<td>Myeclipse注释自动补全</td>
+								<td>arry老师</td>
+								<td>23423</td>
+								<td>文章</td>
+								<td>2015/1/26</td>
+								<td>已置顶</td>
+								<td>已静态化</td>
+								<td>是</td>
+								<td>已发布</td>
+								<td class="t_td">
+									<div class="t_action">
+										<a class="a_see" href="#" title="查看"></a>
+										<a class="a_edit" href="#" title="编辑"></a>
+										<a class="a_save" href="#" title="保存"></a>
+										<a class="a_del" href="#" title="删除"></a>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!--r_table end-->
+		</div>
+	<!--t_right end-->
+  </div>
+ </body>
+</html>

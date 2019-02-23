@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>腾讯课堂首页Banner图</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	
+	h1{text-align:center; margin-top:30px; font-size:36px; font-family:"楷体"; text-shadow:2px 0px  #999;}
+	/*banner图*/
+	.banner{width:100%; height:300px; margin:50px 0; background:#D8CBFF;}
+	.banner .con{width:760px; height:100%; margin:0 auto; position:relative;}
+	.banner .con .pic img{width:760px; height:300px; display:none; position:absolute; top:0; left:0;}
+	/*选项卡*/
+	.banner .con ul.list{width:128px; height:12px; list-style:none; background:rgba(0,0,0,0.3); border-radius:15px; position:absolute; bottom:15px; left:305px; padding:4px 6px;}
+	.banner .con ul.list li{width:8px; height:8px; float:left; border:2px solid #fff; border-radius:6px; margin:0 3px; text-align:center; line-height:8px; cursor:pointer;}
+	.banner .con ul.list li.active{background:#fff;}
+	/*左右按钮*/
+	.banner .con .btn li{width:50px; height:70px; list-style:none; color:#fff; text-align:center; line-height:70px; font-size:34px; font-weight:700; position:absolute; top:115px; display:none; cursor:pointer;}
+	.banner .con .btn li:hover{background:rgba(0,0,0,0.3);}
+	.banner .con:hover .btn li{display:block;}
+	.banner .con .btn li.left{left:10px;}
+	.banner .con .btn li.right{right:10px;}
+  </style>
+ </head>
+ <body>
+  <h1>腾讯课堂首页Banner图</h1>
+  <!--banner图-->
+  <div class="banner">
+	<div class="con">
+		<div class="pic">
+			<img src="img/1.jpg" bgc="#D8CBFF" style="display:block"/>
+			<img src="img/2.jpg" bgc="#4E4D9B"/>
+			<img src="img/3.jpg" bgc="#62A5D0"/>
+			<img src="img/4.jpg" bgc="#F68080"/>
+			<img src="img/5.jpg" bgc="#2851E9"/>
+			<img src="img/6.jpg" bgc="#431B59"/>
+			<img src="img/7.jpg" bgc="#7398E6"/>
+		</div>
+		<!--选项卡-->
+		<ul class="list">
+			<li class="active"></li>
+			<li></li><li></li>
+			<li></li><li></li>
+			<li></li><li></li>
+		</ul>
+		<!--左右按钮-->
+		<ul class="btn" onselectstart="return false">
+			<li class="left">&lt;</li>
+			<li class="right">&gt;</li>
+		</div>
+	</div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		var index = 0;
+		
+		function imgChange(){
+			$("ul.list li").eq(index).addClass("active").siblings().removeClass("active");
+			$("div.pic img").eq(index).stop(true).fadeIn().siblings().hide();
+			bgcolor = $("div.pic img").eq(index).attr("bgc");
+			$(".banner").css("background",bgcolor);
+		}
+		/*选项卡*/
+		$("ul.list li").hover(function(){
+			index = $(this).index();
+			imgChange();
+		});
+		/*右边按钮*/
+		$("ul.btn .right").click(function(){
+			(index < 6)?(index++):(index = 0);
+			 imgChange();
+		});
+		/*左边按钮*/
+		$("ul.btn .left").click(function(){
+			(index > 0)?(index--):(index = 6);
+			 imgChange();
+		});
+		/*自动轮播*/
+		function autoPlay(){
+			Time = setInterval(function(){
+				(index < 6)?(index++):(index = 0);
+				imgChange();
+			},2000);
+		};
+		autoPlay();
+		/*清除定时器*/
+		$(".banner").hover(function(){
+			clearInterval(Time);
+		},function(){
+			autoPlay();
+		});
+	});
+  </script>
+ </body>
+</html>

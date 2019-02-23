@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title></title>
+  <style type="text/css">
+	table,td,th{
+		border:1px solid #666;
+		border-collapse:collapse;
+	}
+
+  </style>
+ </head>
+ <body>
+	<table>
+		<thead>
+			<tr>
+				<th>书籍</th>
+				<th>价格</th>
+				<th>库存</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+			<tr>
+				<td>苏菲的世界</td>
+				<td>22.5</td>
+				<td>20</td>
+				<td>
+					<input type="button" value="修改" onclick="btn_alt(this)"/>
+					<input type="button" value="删除" onclick="btn_del(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td>钢铁是怎样炼成的</td>
+				<td>30</td>
+				<td>15</td>
+				<td>
+					<input type="button" value="修改" onclick="btn_alt(this)"/>
+					<input type="button" value="删除" onclick="btn_del(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td>小王子</td>
+				<td>28.5</td>
+				<td>22</td>
+				<td>
+					<input type="button" value="修改" onclick="btn_alt(this)"/>
+					<input type="button" value="删除" onclick="btn_del(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td>鲁滨逊漂流记</td>
+				<td>22.5</td>
+				<td>30</td>
+				<td>
+					<input type="button" value="修改" onclick="btn_alt(this)"/>
+					<input type="button" value="删除" onclick="btn_del(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="text" name="name"/>
+				</td>
+				<td>
+					<input type="text" name="price"/>
+				</td>
+				<td>
+					<input type="text" name="storage"/>
+				</td>	
+				<td>
+					<input type="button" value="增加" onclick="btn_add(event)"/>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+
+  <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+	window.onload = function(){
+		$("#tbody tr:even").css("background","lightBlue");
+		$("#tbody tr:odd").css("background","lightGreen");
+		$("#tbody tr:last").css("background","white");
+	}
+
+	function btn_del(obj){
+		if(confirm("确定删除？该操作不可逆！")){
+			$(obj).parent().parent().hide();
+		}	
+	}
+
+	function btn_alt(obj){
+		//1.点击修改按钮时,按钮文字变为 确定
+			//1.获取除操作的td外的前3个td
+			//2.获取td中的值
+			//3.创建input,设置td的值为input的value
+		//2.点击确定按钮时，按钮文字变为 修改
+			//1.获取input中value的值
+			//2.将取出的value值直接放到td中
+
+		var opName = $(obj).val();
+		var tds = $(obj).parent().parent().children();
+		if(opName == "修改"){
+			$(obj).val("确定");
+			for(var i=0; i<tds.length-1; i++){
+				var html = $(tds[i]).html();
+				$(tds[i]).html("<input value='"+html+"'/>");
+			}
+		}else{
+			$(obj).val("修改");
+			for(var i=0; i<tds.length-1; i++){
+				var val = $(tds[i]).find("input").val();
+				$(tds[i]).html(val);
+			}
+		}
+	}
+
+	function btn_add(e){
+		//1.为添加按钮添加事件click
+		//2.在click事件中获取三个填入的信息(name,price,storage)
+		//3.创建三个td,分别显示name,price,storage
+		//4.创建一个tr,并且将td追加到tr后面
+		//5.将tr追加到表格的倒数第二行的位置上
+		//注意：新增的行，要珍惜隔行变色
+		
+		var name = $("input[name='name']").val();
+		var price = $("input[name='price']").val();
+		var storage = $("input[name='storage']").val();
+		
+		if(name && price && storage){
+			var td1="<td>"+name+"</td>";
+			var td2="<td>"+price+"</td>";
+			var td3="<td>"+storage+"</td>";
+			var td4='<td><input type="button" value="修改" onclick="btn_alt(this)"/> <input type="button" value="删除" onclick="btn_del(this)"/></td>';
+			var tr = "<tr>"+td1+td2+td3+td4+"</tr>"
+
+			var last = $("#tbody tr:last");
+			last.before(tr);
+			
+			$("#tbody tr:even").css("background","lightBlue");
+			$("#tbody tr:odd").css("background","lightGreen");
+			$("#tbody tr:last").css("background","white");
+		}
+	}
+
+  </script>
+ </body>
+</html>

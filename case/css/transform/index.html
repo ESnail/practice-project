@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title></title>
+  <style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	body{
+	 	background-color:#eee;	
+	 }
+	.main{
+		margin:70px auto;
+	}
+	.view{
+		width:300px;
+		height:200px;
+		border:5px #fff solid;
+	   	float: left;
+	   	margin: 11px;
+		position:relative;
+		overflow:hidden;
+	}
+	img{
+		max-width:100%;
+		overflow:hidden;
+	}
+	.hover{
+		width:300px;
+		height:0;
+		background-color:rgba(0,0,0,0.5);
+		overflow:hidden;
+		position:absolute;
+		top:30px;
+		left:0;
+		transform:rotate(55deg);
+		transition:all 0.2s ease;
+		z-index:1;
+	}
+	
+	.view:hover .hover {
+		height:140px;
+		transform:rotate(0deg);
+	}
+	
+	.view:before{
+		content:"";    
+		width:361px;
+		height:361px;
+		background:rgba(119,0,36,0.5);
+		position:absolute;
+		top:-240px;
+		right:0;
+		transform-origin:100% 0%;
+		transform:rotate(55deg) translateX(40px);
+		transition:all 0.2s ease 0.4s;
+	}
+	
+	.view:hover:before{
+		top:0px;
+	}
+	.view:after{
+		content:"";
+		width:361px;
+		height:361px;
+		background:rgba(119,0,36,0.5);
+		position:absolute;
+		bottom:-240px;
+		left:0;
+		transform-origin:0% 100%;
+		transform:rotate(55deg) translateX(-40px);
+		transition:all 0.2s ease 0.4s;
+	}
+	.view:hover:after{
+		bottom:0;
+	}
+	
+	h2{
+		text-align:center;
+		color:#fff;
+		margin-top:20px;
+		margin-bottom:15px;
+		border-bottom:1px solid rgba(255,255,255,0.5);
+	}
+	p{
+		color:#fff;
+	}
+  </style>
+
+ </head>
+ <body>
+	<div class="main">
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/1.jpg">
+		</div>
+		
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/2.jpg">
+		</div>
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/3.jpg">
+		</div>
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/4.jpg">
+		</div>
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/5.jpg">
+		</div>
+		<div class="view">
+			<div class="hover">
+				<h2>CSS3旋转效果</h2>
+				<p>开心每一天，美丽每一天</p>
+			</div>
+			<img src="images/6.jpg">
+		</div>
+		
+	</div>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script type="text/javascript">
+	
+  </script>
+ </body>
+</html>

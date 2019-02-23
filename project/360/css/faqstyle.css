@@ -1,0 +1,59 @@
+/*****content部分样式*****/
+#content .title {
+	height:105px;
+	border-bottom:1px solid #e0e0e0;
+	overflow:hidden;
+}
+#content .title span{
+	width:160px;
+	height:42px;
+	display:block;
+	background:url("../images/iconlist_3.png") -2px -392px;
+	margin-top:40px;
+}
+.question {
+	margin-right:50px;
+	padding:30px 0 40px 0;
+	border-bottom:1px solid #e0e0e0;
+}
+.question i {
+	width:20px;
+	height:26px;
+	display:inline-block;
+	background:url("../images/iconlist_3.png") -345px 0;
+	margin-right:10px;
+	vertical-align:middle;
+} 
+.question h3 {
+	font-weight:normal;
+	color:#313131;
+}
+.answer {
+	margin-top:10px;
+	overflow:hidden;
+}
+.answer i {
+	height:20px;
+	background-position:-345px -37px;
+	float:left;
+}
+.answer ul {
+	float:left;
+}
+.answer ul li {
+	color:#6B6B6B;
+	line-height:26px;
+}
+.fatie {
+	height:80px;
+	text-align:center;
+	padding-top:30px;
+	color:#A0A0A0;
+}
+#content a {
+	font-size:15px;
+	color:#F05670;
+	border-bottom:1px solid #F05670; 
+}
+
+

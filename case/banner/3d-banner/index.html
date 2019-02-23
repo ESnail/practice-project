@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>3D立方体图片切换旋转banner</title>
+  <style type="text/css" id="css">
+    *{margin:0; padding:0;}
+	ul li{list-style:none;}
+	
+	h2{margin-top:50px; text-align:center; color:#333; font-size:"微软雅黑";}
+	
+	.picbox{width:800px; height:360px; margin:30px auto; position:relative;}
+	.pic{width:800px; height:360px;  /*3D远景*/-webkit-perspective:800px;}
+	.pic li{height:360px; float:left; position:relative;					
+	    /*3D*/-webkit-transform-style:preserve-3d; 
+		/*transition:5s;*/
+		-webkit-transform:translateZ(-180px);}
+	.pic li span{height:360px; display:block; position:absolute;}
+	.pic li span:nth-child(1){background:url("img/1.png") no-repeat;
+		-webkit-transform:translateZ(180px);
+		}
+	.pic li span:nth-child(2){background:url("img/2.png") no-repeat; 
+		-webkit-transform:translateZ(-180px) rotateX(180deg);
+		}
+	.pic li span:nth-child(3){background:url("img/3.jpg") no-repeat; top:-360px; 
+		/*折叠基线*/-webkit-transform-origin:bottom; 
+		-webkit-transform:translateZ(180px) rotateX(90deg);
+		}
+	.pic li span:nth-child(4){background:url("img/4.jpg") no-repeat; top:360px;
+		/*折叠基线*/-webkit-transform-origin:top; 
+		-webkit-transform:translateZ(180px) rotateX(-90deg);
+		}
+	
+	/*.pic:hover li{-webkit-transform:translateZ(-180px) rotateX(180deg);}*/
+	
+	.btn{position:absolute; bottom:20px; right:30px;}
+	.btn li{width:20px; height:20px; margin-right:10px; border:1px solid #fff; border-radius:10px; float:left; text-align:center; line-height:20px; color:#fff; font-weight:bold; cursor:pointer;}
+	.btn .active{background:red;}
+  </style>
+ </head>
+ <body>
+  <h2>3D立方体图片切换旋转banner</h2>
+
+  <div class="picbox">
+	<ul class="pic"></ul>
+
+	<!--按钮--->
+	<ul class="btn">
+		<li class="active">1</li><li>2</li><li>3</li><li>4</li>
+	</ul>
+  </div>
+  
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		function animate(liLen){
+			var li = "";
+			var liWid = 800/liLen;
+			var spancss = "";
+			var z = 0;
+			var liTime = "";
+			for(var i=0; i<liLen; i++){
+				if(i>liLen/2){z--;};
+				li += "<li style='z-index:"+z+"'><span></span><span></span><span></span><span></span></li>";
+				spancss += ".pic li:nth-child("+(i+1)+") span{background-position:"+(i*-liWid)+"px;}";
+				liTime += ".pic li:nth-child("+(i+1)+"){-webkit-transition:0.3s "+(i*0.1)+"s;}"
+			};
+			$(".pic").append(li);
+			$("#css").append(".pic li{width:"+liWid+"px;} .pic li span{width:"+liWid+"px;}"+spancss+liTime);
+		};
+		
+		animate(30);
+
+		$(".btn li").click(function(){
+			var index = $(this).index();
+			var deg = -index*90;
+			$(this).addClass("active").siblings().removeClass("active");
+			$(".pic li").css("-webkit-transform","translateZ(-180px) rotateX("+deg+"deg)");
+		});
+	});
+  </script>
+  
+ </body>
+</html>

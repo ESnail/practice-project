@@ -1,0 +1,72 @@
+@import "bootstrap.less"; //执行此句后，页面中就无需再引入bootstrap.css文件了
+
+/**变量声明**/
+@navbar-height: 50px;
+@img-base-dir: "../imgs"; //项目中所有图片的基础路径
+@logo-margin-top: -11px; //导航栏中logo图片的上边距
+
+/*通用样式*/
+body {
+  padding-top: @navbar-height;
+}
+
+
+/**导航栏部分**/
+.navbar-brand {
+  a {
+    display: inline-block;
+    width: 63px;
+    height: 42px;
+    background: url("@{img-base-dir}/hdr-spr.png") 0 -512px no-repeat ;
+    margin-top: @logo-margin-top;
+  }
+}
+.navbar-form {
+  .form-control-static {
+    color: #fff;
+    a {
+      color: #fff;
+      &:hover {
+        text-decoration: none;
+        color: @blue-lighter;
+      }
+    }
+  }
+}
+/**页面主体内容**/
+.main {
+  background: @blue-dark;
+  color: #fff;
+ .container > .row {
+   margin-bottom: 20px;
+ }
+  .media-list a {
+    color: #fff;
+  }
+}
+.mask-container {
+  position: relative;
+  overflow: hidden;
+  .mask {
+    position: absolute;
+    top: 106px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    background-color: rgba(0,0,0,.6);
+    color: #fff;
+    -webkit-transition: top 500ms;
+    -moz-transition: top 500ms;
+    -ms-transition: top 500ms;
+    -o-transition: top 500ms;
+    transition: top 500ms;
+    cursor: pointer;
+    &:hover {
+      top: 0;
+    }
+  }
+}
+.footer {
+
+}

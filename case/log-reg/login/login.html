@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>学生管理系统-登录</title>
+    <style type="text/css">
+	*{ margin:0px; padding:0px;}
+	body{ font:12px "yahei";}
+	/*login box*/
+	#login{width:1000px; height:650px; background:url("images/bg.jpg"); margin:0px auto;}
+	/*login 头部*/
+	#login .lg_header{width:960px; height:30px; background:#090; padding:20px;}
+	#login .lg_header h1{color:#FFF; margin-left:440px;}
+	/* login 内容*/
+	#login .lg{width:290px; height:290px; background:#090; border-radius:10px; padding:5px; margin-top:150px; margin-left:410px;}
+	#login .lg .lg_con{width:250px; height:250px; background:#fff; border-radius:10px; box-shadow:0px 0px 10px #666; padding:20px;}
+	#login .lg .lg_con h2{font-size:26px; color:#000; margin-bottom:15px;}
+	#login .lg .lg_con ul li{list-style:none; width:220px; height:30px; margin:auto; padding:5px;}
+	#login .lg .lg_con ul li .title{display:block; width:60px; height:30px; text-align:center; line-height:30px; color:#fff; background:#6c0; float:left}
+	#login .lg .lg_con #user{width:141px; height:25px; border:2px solid #393; margin-left:5px; padding-left:5px;}
+	#login .lg .lg_con #password{width:141px; height:25px; border:2px solid #393; margin-left:5px; padding-left:5px;}
+	#login .lg .lg_con .radio{display:block; width:15px; height:30px; text-align:center; line-height:30px; margin-left:10px; float:left;}
+	#login .lg .lg_con .type{display:block; width:40px; height:30px; text-align:center; line-height:30px; margin-left:10px; float:left;}
+	#login .lg .lg_con #b_login{width:220px; height:30px; margin:auto; font-size:16px; font-weight:bolder; color:#FFF; background:#090;border:none;}
+	#login .lg .lg_con #b_login:hover{background:#6C0}
+	#login .lg .lg_con #b_register{width:220px; height:30px; margin:auto; font-size:16px; font-weight:bolder; color:#FFF; background:#090; border:none;}
+	#login .lg .lg_con #b_register:hover{background:#6C0}
+
+</style>
+</head>
+ 
+<body>
+	 <div id="login">
+     	<div class="lg_header">
+        	<h1>学生信息管理系统</h1>	
+        </div>
+    	<div class="lg">
+			<div class="lg_con">
+            	<h2 align="center"> 用户登录</h2>
+                <form method="post" action="">
+                <ul>
+                	<li><span class="title">用户</span><input type="text" id="user" name="username" placeholder="请输入账号"></li>
+                    <li><span class="title">密码</span><input type="password" id="password" name="userpassword" placeholder="请输入密码"></li>
+		    <li><span class="title">登录类型</span><label><input type="radio" class="radio" name="type" value="manager" checked><span class="type">管理员</span></label><label><input type="radio" class="radio" name="type" value="user"><span class="type">学生</span></label></li>
+                    <li><input type="submit" value="登录" id="b_login"></li>
+                    <li><input type="reset" value="重置" id="b_register"></li>
+                </ul>
+                </form>
+            </div>        
+        </div>
+    </div>
+</body>
+</html>

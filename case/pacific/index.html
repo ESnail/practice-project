@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>太平洋时尚网</title>
+	<style type="text/css">
+		*{margin:0; padding:0;}
+		body{font-size:12px; font-family:"微软雅黑";}
+		
+		/*头部*/
+		#header{width:100%; height:80px; border-bottom:1px solid #ccc; background:#fff; position:fixed; top:0px; left:0px; z-index:5;}
+		#header .headerBox{width:1130px; height:100%; margin:0 auto; padding:20px 0px;}
+		#header .headerBox a{display:block; width:207px; height:52px;  float:left;}
+		#header .headerBox ul{width:800px; height:20px; padding:20px; margin-left:40px; float:left;}
+		#header .headerBox ul li{list-style:none; width:80px; font-size:18px; color:#333; float:left; margin-right:40px;}
+		#header .headerBox ul li a{text-decoration:none; color:#000;}
+		#header .headerBox ul li a:hover{text-decoration:underline;}
+		
+		/*头部标题1*/
+		#title1{width:1130px; height:70px; margin:120px auto 0px auto; text-align:center; border-bottom:1px solid #000;}
+
+		/*图片展示1*/
+		.pic1{width:1130px; height:600px; margin:40px auto 0px auto;}
+		.pic1 ul li{list-style:none; width:250px; height:260px; float:left; margin-right:30px; margin-bottom:30px; overflow:hidden;}
+		.pic1 ul li:nth-child(4n){margin-right:0px;}
+		.pic1 ul li .txtBox{width:240px; height:242px; background:url("images/lineBg.png"); padding:10px; transform:translateY(0px) rotate(130deg); transition:all 1s;}
+		.pic1 ul li .txtBox:hover{transform:translateY(-265px) rotate(360deg);}
+		.pic1 ul li .txtBox a{text-decoration:none; display:block; width:180px; height:180px; background:#fff; text-align:center; padding:60px 24px 0px 24px; color:#333;}
+		.pic1 ul li .txtBox a h3{font-size:16px;}
+		.pic1 ul li .txtBox a h4{font-size:14px; font-weight:400; line-height:80px;}
+		.pic1 ul li .txtBox a p{font-size:12px; text-align:left;}
+		
+		/*头部标题2*/
+		#title2{width:1130px; height:85px; margin:30px auto 0px auto; text-align:center; border-bottom:1px solid #000;}
+		#title2 span{width:240px; height:60px; display:block; background:url("images/title.jpg") 0px 283px; margin:0px auto;}
+		/*小标题*/
+		#title2 .mark{width:1130px; height:32px; margin:0px auto;}
+		#title2 .mark ul{width:200px; height:32px; margin:0px auto;}
+		#title2 .mark ul li{width:50px; height:32px;list-style:none; float:left; font-size:16px; color:#999;}
+		#title2 .mark ul li a{width:35px; height:32px; display:block; text-decoration:none; color:#999; float:left;}
+		#title2 .mark ul li em{width:1px; height:32px; display:block; padding:0px 5px; float:left;}
+	
+	
+		/*图片展示2*/
+		.pic2{width:1130px; height:300px; margin:40px auto 0px auto; position:relative;}
+		.pic2 ul{width:1130px; height:300px; position:absolute; top:0; left:0; display:none;}
+		.pic2 ul li{list-style:none; width:250px; height:260px; float:left; margin-right:30px; margin-bottom:30px; position:relative; overflow:hidden;}
+		.pic2 ul li:nth-child(4n){margin-right:0px;}
+		.pic2 ul li span{width:48px; height:30px; display:block; background:#000; text-align:center; line-height:30px; font-size:14px; color:#fff; position:absolute; top:0px; left:0px;}
+		.pic2 ul li .txtBox{width:240px; height:242px; background:url("images/lineBg.png") rgba(255,255,255,.5); padding:10px; position:absolute; top:240px; left:0px;}
+		.pic2 ul li .txtBox a{text-decoration:none; display:block; width:180px; height:180px; background:#fff; text-align:center; padding:60px 24px 0px 24px; color:#333;}
+		.pic2 ul li .txtBox a h3{font-size:16px; line-height:50px; color:#333; font-weight:thin;}
+		.pic2 ul li .txtBox a p{font-size:14px; text-align:left; color:#666; line-height:20px;}
+		
+		.pic2 ul.active{display:block;}
+	</style>
+ </head>
+ <body>
+  <!--头部-->
+  <div id="header">
+	<div class="headerBox">
+		<a href="http://health.pclady.com.cn/124/1246587.html"><img src="images/logo.jpg"/></a>
+		<ul>
+			<li><a class="nav" href="#">时尚</a></li>
+			<li><a class="nav" href="#">美容</a></li>
+			<li><a class="nav" href="#">奢华</a></li>
+			<li><a class="nav" href="#">乐活</a></li>
+			<li><a class="nav" href="#">热点</a></li>
+			<li><a class="nav" href="#">互动</a></li>
+		</ul>
+	</div>
+  </div>
+  
+  <!--头部标题1-->
+  <div id="title1">
+	<a href="http://health.pclady.com.cn/124/1246587.html"><img src="images/1.jpg"/></a>
+  </div>
+  <!--图片展示1-->
+  <div class="pic1">
+	<ul>
+		<li>
+			<a href="#"><img src="images/2.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>瘦身</h3>
+					<h4>七个诀窍不再嘴馋</h4>
+					<p>冬天到了，天气一冷，人自然需要通过摄取食物中的热量来抵御寒冷</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/3.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>健康</h3>
+					<h4>太放纵，小心周末病缠上你</h4>
+					<p>周末，过好了是休息，过不好却可能比上班更伤身，但许多上班</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/4.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>旅行</h3>
+					<h4>越冬冰岛的奇幻之旅</h4>
+					<p>当我们谈论冰岛时，主要谈论什么呢？冰川，火山，还是瀑布？</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/5.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>明星</h3>
+					<h4>体重决定红不红？</h4>
+					<p>真是好坏，女神也被“整”了！在安徽卫视2014国剧盛典的红毯</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/6.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>情感</h3>
+					<h4>揭秘！男人吃醋的七个表现</h4>
+					<p>很多女人都觉得男人怎么不会吃醋呢，甚至是为了试探他的爱故</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/7.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>暖男星座</h3>
+					<h4>盛产陈学冬式暖男的星座</h4>
+					<p>暖男是指能带给人温暖的男子，他们细致体贴，温柔亲切，善解人意</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/8.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>萌宠</h3>
+					<h4>喵！这里是一场猫咪时装</h4>
+					<p>Matilda(玛蒂尔达)，一只来自阿尔冈九鼎猫咪，在年度的猫</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/9.jpg" width="260" height="260"/></a>
+			<div class="txtBox">
+				<a>
+					<h3>明星秀场</h3>
+					<h4>女星脱团单飞哪家强</h4>
+					<p>红极一时的组合总有分道扬镳的一天，娱乐圈也有不少明星在离</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+  </div>
+   
+  <!--头部标题2-->
+  <div id="title2">
+	<a href="http://health.pclady.com.cn/124/1246587.html"><span></span></a>
+	 <!--小标题-->
+	  <div class="mark">
+		<ul>
+			<li class="m_a"><a href="#" style="color:#000;">景点</a><em>|</em></li>
+			<li class="m_a"><a href="#">酒店</a><em>|</em></li>
+			<li class="m_a"><a href="#">美食</a><em>|</em></li>
+			<li class="m_a"><a href="#">活动</a></li>
+		</ul>
+	  </div>
+  </div>
+ 
+  <!--图片展示2-->
+  <div class="pic2">
+	<ul class="active">
+		<li>
+			<a href="#"><img src="images/bj1.jpg" width="260" height="260"/></a>
+			<span>北京</span>
+			<div class="txtBox">
+				<a>
+					<h3>享老北京风情 慢逛7</h3>
+					<p>老北京在大槐树的树荫下有了摩登气息，胡同尽量保持低调</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/sh1.jpg" width="260" height="260"/></a>
+			<span>上海</span>
+			<div class="txtBox">
+				<a>
+					<h3>上海小资旅行 书店里</h3>
+					<p>看书最好的地方自然是图书馆，不过，对于喜欢小资</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/gz1.jpg" width="260" height="260"/></a>
+			<span>广州</span>
+			<div class="txtBox">
+				<a>
+					<h3>携子同游 广州趣味农</h3>
+					<p>你是否一直在找适合带孩子去玩的农庄，可以种地、摘菜</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/tw1.jpg" width="260" height="260"/></a>
+			<span>台湾</span>
+			<div class="txtBox">
+				<a>
+					<h3>畅游台湾 那些不得不</h3>
+					<p>自从台湾开放大陆游客组团旅游的线路以来,台湾已经接待了</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<a href="#"><img src="images/bj2.jpg" width="260" height="260"/></a>
+			<span>北京</span>
+			<div class="txtBox">
+				<a>
+					<h3>康莱德商务酒店的个性</h3>
+					<p>京康莱德酒店是继大连、三亚海棠湾康莱德酒店之后，希尔</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/sh2.jpg" width="260" height="260"/></a>
+			<span>上海</span>
+			<div class="txtBox">
+				<a>
+					<h3>浦东丽思卡尔顿ESPA水疗</h3>
+					<p>好一朵美丽的茉莉花，芬芳美丽满枝桠，又香又白惹人夸</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/gz2.jpg" width="260" height="260"/></a>
+			<span>广州</span>
+			<div class="txtBox">
+				<a>
+					<h3>至善之情广州香格里拉大酒店</h3>
+					<p>茫茫雪山，疲惫的旅行者独自前行。身处绝境的人类遭遇狼群</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/tw2.jpg" width="260" height="260"/></a>
+			<span>台湾</span>
+			<div class="txtBox">
+				<a>
+					<h3>饕餮享受台湾6家主题餐厅</h3>
+					<p>之前有报导提出亚洲最具七大塬罪中「Gluttony-暴食」的地</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<a href="#"><img src="images/bj3.jpg" width="260" height="260"/></a>
+			<span>北京</span>
+			<div class="txtBox">
+				<a>
+					<h3>老北京传统名点</h3>
+					<p>最近最火的美食，不是舌尖2的蒲菜和台湾旗鱼，也不是洛杉</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/sh3.jpg" width="260" height="260"/></a>
+			<span>上海</span>
+			<div class="txtBox">
+				<a>
+					<h3>迷上海的白松露</h3>
+					<p>海风餐厅意籍总厨Claudio Dieli将白松露的特性充分发</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/gz3.jpg" width="260" height="260"/></a>
+			<span>广州</span>
+			<div class="txtBox">
+				<a>
+					<h3>广州深巷拉面大搜罗</h3>
+					<p>广州究竟有多少纯正日本血统的星级拉面店，想吃一碗纯正</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/tw3.jpg" width="260" height="260"/></a>
+			<span>台湾</span>
+			<div class="txtBox">
+				<a>
+					<h3>品尝台湾最地道乌鱼子</h3>
+					<p>说起台湾美食，大家也许会立刻想到蚵仔煎、贡丸、凤梨</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+
+	<ul>
+		<li>
+			<a href="#"><img src="images/bj4.jpg" width="260" height="260"/></a>
+			<span>北京</span>
+			<div class="txtBox">
+				<a>
+					<h3>徽班再进京</h3>
+					<p>未来一个月北京艺术活动丰富。既有传统的徽班话剧，也</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/sh4.jpg" width="260" height="260"/></a>
+			<span>上海</span>
+			<div class="txtBox">
+				<a>
+					<h3>法语文化与电影艺术</h3>
+					<p>未来一个月，上海最值得期待的是法语文化节，届时有法语</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/gz4.jpg" width="260" height="260"/></a>
+			<span>广州</span>
+			<div class="txtBox">
+				<a>
+					<h3>岭南文化的情与爱</h3>
+					<p>广州最近一段时间最受本地人关注的活动应该是关于清代广</p>
+				</a>
+			</div>
+		</li>
+		<li>
+			<a href="#"><img src="images/tw4.jpg" width="260" height="260"/></a>
+			<span>台湾</span>
+			<div class="txtBox">
+				<a>
+					<h3>醉心民谣入成都</h3>
+					<p>近期，醉心民谣—麦斯米兰2015全国巡演·成都站将上演</p>
+				</a>
+			</div>
+		</li>
+	</ul>
+  </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	$(function(){
+		//鼠标滑到上面时，图片介绍从下方出现
+		$(".pic2 ul li").hover(function(){
+			$(".txtBox",this).stop().animate({top:"0px"},300);
+		},function(){
+			$(".txtBox",this).stop().animate({top:"240px"},300);
+		});
+
+		//变换内容
+		$("#title2 ul li").hover(function(){
+			$("a",this).css("color","#000");
+			$(this).siblings().find("a").css("color","#999");
+			var index = $(this).index();
+			$(".pic2 ul").eq(index).show().siblings().hide();	
+		});
+	});
+ </script>
+ </body>
+</html>

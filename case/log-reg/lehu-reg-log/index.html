@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>乐乎--每个人的理想国</title>
+	<style type="text/css">
+    	*{margin:0px; padding:0;}
+		body{font-size:16px; color:#fff; font-family:"微软雅黑"; background:url(images/bg.jpg) no-repeat top center;}
+		
+		/*regbox start*/
+		.regbox{width:435px; height:600px; text-align:center; margin:100px auto;}
+		.regbox .logo{width:435px; height:140px; background:url(images/btn.png) 0px 0px; overflow:hidden;}
+		.regbox form{width:390px; height:280px; margin:50px auto;}
+		/*nav start*/
+		.regbox  .nav{height:55px; background:#fff;}
+		.regbox  .nav .reg{width:195px; height:55px; float:left;}
+		.regbox  .nav .reg .w_reg{display:block; width:155px; height:55px; background:url(images/btn.png) 0px -180px; overflow:hidden; float:left;}
+		.regbox  .nav .reg .w_song{display:block; width:40px; height:55px; background:url(images/btn.png) -155px -175px; overflow:hidden; float:left;}
+		/*nav login start*/
+		.regbox .login{width:195px; height:55px; background:url(images/btn.png) -194px -275px; overflow:hidden; float:left;}
+		.regbox .login:hover{background-position:-194px -371px;}
+		/*nav login end*/
+		/*con start*/
+		.regbox .con{height:220px; background:#fff; position:relative;}
+		.regbox .reg_con{height:150px; float:left; margin-top:30px; position:absolute; top:0px; left:0px; display:none;}
+		.regbox .lg_con{height:230px; float:left; margin-top:30px; position:absolute; top:0px; left:0px; display:none;}
+		.regbox input{border:1px solid #bdbdbd; border-radius:3px; color:#acacac; outline:none;}
+		.regbox .input_text{width:280px; height:20px; padding:10px;}
+		.regbox .btn{width:300px; height:40px; background:#a3ca04; margin-top:10px; font-size:18px; color:#fff; outline:none;}
+		.regbox .btn:hover{background:#c0ef05}
+		.regbox p{width:300px; margin:10px auto; color:gray;}
+		.regbox p input{float:left; border:#aed505; border-radius:5px;}
+		.regbox p label a{text-decoration:none; display:inline-block; font-size:12px; margin-left:5px; float:left;}
+		.regbox p a{text-decoration:none; display:inline-block; font-size:12px; color:gray; float:right;}
+		/*con end*/
+		/*regbox end*/
+    </style>
+</head>
+
+<body>
+    <div class="regbox">
+    	<!--logo start-->
+		<div class="logo"></div>
+		<!--logo end-->
+        <form>
+        	<!--nav start-->
+			<div class="nav">
+				<a class="reg">
+					<span class="w_reg"></span>
+					<span class="w_song"></span>
+				</a>
+				<a class="login"></a>	
+			</div>
+			<!--nav end-->
+			<!--con start-->
+			<div class="con">
+				<div class="reg_con" style="display:block">
+					<input class="input_text" type="text" placeholder="常用邮箱/网易邮箱"  autofocus="ok"></input>
+					<input class="input_text" type="password" placeholder="密码"></input>
+					<input class="btn" type="submit" value="注册" ></input>
+				</div>
+				<div class="lg_con">
+					<input class="input_text" type="text" placeholder="常用邮箱/网易邮箱"></input>
+					<input class="input_text" type="password" placeholder="密码"></input>
+					<input class="btn" type="submit" value="登陆"></input>
+					<p>
+						<label><input type="checkbox"></input><a href="#">记住密码</a></label>
+						<a href="#">忘记密码</a>
+					</p>
+				</div>  
+			</div>
+			<!--con end-->
+        </form>
+    </div>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".reg").click(function(){
+				$(".con .reg_con").show().siblings().hide();
+				$(".w_reg").css("background-position","-1px -175px");
+				$(".w_song").css("background-position","-155px -175px");
+				$(".login").css("background-position","-194px -275px");
+			});	
+
+			$(".login").click(function(){
+				$(".con .lg_con").show().siblings().hide();
+				$(this).css("background-position","-194px -175px");
+				$(".w_reg").css("background-position","-1px -275px");
+				$(".w_song").css("background-position","-155px -275px");
+				
+			});
+		});
+	</script>
+</body>
+</html>

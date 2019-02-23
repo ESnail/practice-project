@@ -1,0 +1,118 @@
+/* CSS Document */
+/*****content部分样式*****/
+#content .title {
+	height:115px;
+	border-bottom:1px solid #e0e0e0;
+	overflow:hidden;
+}
+#content .title span{
+	width:160px;
+	height:50px;
+	display:block;
+	background:url("../images/iconlist_3.png") -180px -385px;
+	margin-top:35px;
+}
+.kind {
+	padding:30px 0;
+}
+.kind p {
+	font-size:16px;
+	color:#626262;
+}
+.kind ul {
+	width:990px;
+	margin:40px auto 0;
+	overflow:hidden;
+}
+.kind ul li {
+	float:left;
+	width:172px;
+	height:76px;
+	padding:1px;
+	border:1px solid #e0e0e0;
+	margin-right:27px;
+	margin-bottom:20px;
+}
+.kind ul li:nth-child(5n){
+	margin-right:0;
+}
+.kind ul li a {
+	display:block;
+	width:100%;
+	height:100%;
+	background:url("../images/iconlist_3.png"); 0 0;
+}
+.kind ul .k2 a {
+	background-position:-172px -76px;
+}
+.kind ul .k3 a {
+	background-position:-172px -307px;
+}
+.kind ul .k4 a {
+	background-position:0 -230px;
+}
+.kind ul .k5 a {
+	background-position:0 -76px;
+}
+.kind ul .k6 a {
+	background-position:0 -308px;
+}
+.kind ul .k7 a {
+	background-position:-172px -152px;
+}
+.kind ul .k8 a {
+	background-position:0 -152px;
+}
+.kind ul .k9 a {
+	background-position:-172px 0;
+}
+.kind ul .daixu {
+	background:url("../images/iconlist_3.png") -172px -230px #E5E5E5;
+}
+.kind ul li:hover {
+	border:2px solid #F05156;
+	padding:0;
+}
+.kind ul .daixu:hover {
+	border:1px solid #e0e0e0;
+	padding:1px;
+}
+.table h3 {
+	color:#000;
+	font-size:34px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.table ul {
+	border-top:1px solid #e0e0e0;
+	border-left:1px solid #e0e0e0;
+	margin-bottom:40px;
+}
+.table ul li{
+	height:50px;
+	border-right:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	font-size:18px;
+}
+.table ul li span {
+	float:left;
+	width:484px;
+	line-height:50px;
+	padding-left:10px;
+	color:#595959;
+}
+.table ul .th {
+	background:#a8a8a8;
+	color:#fff;
+	font-size:22px;
+	font-weight:bold;
+}
+.update {
+	height:90px;
+	text-align:center;
+	color:#A0A0A0;
+	font-size:16px;
+	font-weight:bold;
+}
+
+

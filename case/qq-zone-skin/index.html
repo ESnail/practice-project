@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{background:#000 url("images/b1.jpg") no-repeat top center;}
+	ul li{list-style:none;}
+	img{border:none;}
+	#nav{width:884px; height:130px; background:#e3e3e3; margin:285px auto 0 auto; overflow:hidden; position:relative;}
+	#nav ul{width:1800px;}
+	#nav ul li{width:175px; height:110px; float:left; margin:10px 1px;}
+	#nav ul li img{border:none; background:#e4e4e4; opacity:0.7;}
+	#nav ul li img:hover{background:#e4e4e4; opacity:1; cursor:pointer;}
+	#nav .btn a{width:15px; height:24px; display:inline-block; position:absolute; top:53px;}
+	#nav .btn .prev{background:url("images/dirl.png"); left:5px;}
+	#nav .btn .next{background:url("images/dirr.png"); right:5px;}
+  </style>
+ </head>
+ <body>
+  <div id="nav">
+	<ul>
+		<li><img bg="images/b1.jpg" src="images/s1.jpg"/></li>
+		<li><img bg="images/b2.jpg" src="images/s2.jpg"/></li>
+		<li><img bg="images/b3.jpg" src="images/s3.jpg"/></li>
+		<li><img bg="images/b4.jpg" src="images/s4.jpg"/></li>
+		<li><img bg="images/b5.jpg" src="images/s5.jpg"/></li>
+		<li><img bg="images/b6.jpg" src="images/s6.jpg"/></li>
+		<li><img bg="images/b7.jpg" src="images/s7.jpg"/></li>
+		<li><img bg="images/b8.jpg" src="images/s8.jpg"/></li>
+		<li><img bg="images/b9.jpg" src="images/s9.jpg"/></li>
+		<li><img bg="images/b10.jpg" src="images/s10.jpg"/></li>
+	</ul>
+	<div class="btn">
+		<a href="javascript:void(0)" class="prev"></a>
+		<a href="javascript:void(0)" class="next"></a>
+	</div>
+  </div>
+	
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript">
+	var num = 0;
+	
+	//点击图片切换背景
+	$("#nav ul li img").click(function(){
+		var b_img = $(this).attr("bg");
+		$("body").css("background-image","url(' " +b_img+ "')");
+	})
+
+	//点击上按钮
+	$("#nav .btn .prev").click(function(){
+		num--;
+		if(num = 0)num=1;
+		$("#nav ul").animate({marginLeft:-num*885+"px"},500);
+	})
+	
+	//点击上按钮
+	$("#nav .btn .next").click(function(){
+		num++;
+		if(num = 2)num=1;
+		$("#nav ul").animate({marginLeft:-num*885+"px"},500);
+	})
+	
+  </script>
+ </body>
+</html>

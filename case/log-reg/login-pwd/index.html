@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册——密码强度验证</title>
+	<style type="text/css">
+    	*{margin:0; padding:0;}
+		body{font-size:14px; font-family:"微软雅黑"; background:url("images/bg.jpg") no-repeat top center;}
+		
+		#regist{display:block; width:40px; height:40px; text-align:center; line-height:40px; border-radius:40px; background:#000; color:#fff; text-decoration:none; margin:30px; border:1px solid #fff; box-shadow:0px 1px 1px #666; display:none; transition:all 0.3s ease;}
+		#regist:hover{background:#666;}
+
+		/*regbox start*/
+		#regBox{border:1px solid gray; width:30%; margin:100px auto; background:#fff; box-shadow:1px 1px 50px #000; border-radius:20px; padding:20px;}
+		/* r_title start*/
+		#regBox .r_title{margin-bottom:20px;}
+		#regBox .r_title span{font-size:30px; color:gray; }
+		#regBox .r_title a{text-decoration:none; width:30px; height:30px; display:block; text-align:center; line-height:30px; color:gray; border-radius:15px; border:1px solid gray; float:right;}
+		#regBox .r_title a:hover{background:#000; color:#fff;}
+		/*r_title end*/
+		/*r_content start*/
+		#regBox .r_content{width:100%; height:200px; text-align:center;}
+		#regBox .r_content .input_text{width:90%; height:40px; border:1px solid #d9d9d9; color:#000; margin:0px auto; margin-bottom:20px; border-radius:3px; outline:none; font-family:"楷体"; color:gray; padding-left:10px; box-shadow:1px 1px 2px #000;}
+		#regBox .r_content .code{width:25%;}
+		#regBox .r_content .passStrength{width:90%; margin:0 auto;}
+		#regBox .r_content .passStrength .info{text-align:center; width:25%; background:gray; float:left; margin-bottom:20px; border-radius:20px; color:white;}
+		#regBox .r_content .btn{width:90%; height:40px; background:rgb(37,38,44); border:0; color:#fff; font-size:20px; cursor:pointer; box-shadow:1px 2px 2px #000; outline:none;}
+		#regBox .r_content .btn:hover{background:gray;}
+		/*r_content end*/
+		.clear{clear:both}
+
+    </style>
+</head>
+
+<body>
+	<a id="regist" href="javascript:regist()">注册</a>
+	<!--reg start-->
+	<div id="regBox">
+    	<!-- title start -->
+		<div class="r_title">
+			<span>注册</span>
+			<a href="javascript:close()">X</a>
+			<div class="clear"></div>
+		</div>
+		<!--title end-->
+		<!--content start-->
+		<div class="r_content">
+			<form>
+        	<input class="input_text" type="text" placeholder="请输入账号" autofocus="ok"/>
+            <input class="input_text" type="password" onkeyup="checkStrong(this.value)" placeholder="请输入密码"/> 
+			<!--onkeyup表示文本输入完毕键盘弹起-->
+            <!--密码强度-->
+			<div class="passStrength">
+				<div class="info" id="info0">弱</div>
+				<div class="info" id="info1">一般</div>
+				<div class="info" id="info2">强</div>
+				<div class="info" id="info3">很强</div>
+			</div>
+			<br/>
+            <input class="btn" type="submit" value="注册"/>
+        </form>
+		</div>
+		<!--content end-->
+   </div>
+   <!--reg end-->
+	
+   <script type="text/javascript">
+		function checkStrong(pass){
+			var level = -1; //密码强度是级别
+			var colors = ["red","orange","blue","green"]; //强度的颜色
+			for(var i=0; i<4; i++){//初始化设置
+				document.getElementById("info"+i).style.background="gray";
+			}
+			//长度
+			if(pass.length<6){
+				return false;
+			}
+			//1.包含数字 正则表达式在js中的应用
+			if(/\d/.test(pass)){ // /\d/,/ /表示正则表达式，\d表示数字
+				level++;//数字级别加1
+			}
+			//2.包含小写字母 正则表达式在js中的应用
+			if(/[a-z]/.test(pass)){ //[a-z]表示小写字母
+				level++;
+			}
+			//1.包含大写字母 正则表达式在js中的应用
+			if(/[A-Z]/.test(pass)){
+				level++;
+			}
+			//1.包含特殊字符 正则表达式在js中的应用
+			if(/\W/.test(pass)){ //\w是特殊字符
+				level++;
+			}
+			for(var i=0; i<=level; i++){//根据强度改变颜色
+				var info = document.getElementById("info"+i);
+				info.style.background = colors[i];
+			}
+		}
+		
+		function close(){
+			var regBoxElem = document.getElementById("regBox");
+			regBoxElem.style.display = "none";
+			var registElem = document.getElementById("regist");
+			registElem.style.display = "block";
+		}
+
+		function regist(){
+			var regBoxElem = document.getElementById("regBox");
+			regBoxElem.style.display = "block";
+			var registElem = document.getElementById("regist");
+			registElem.style.display = "none";
+		}
+		
+   </script>
+</body>
+</html>

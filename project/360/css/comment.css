@@ -1,0 +1,141 @@
+/*共同样式*/
+@charset "utf-8";
+body {
+	font-size:14px;
+	font-family:"微软雅黑";
+	color:#6b6b6b;
+}
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+/*默认链接样式*/
+a{
+	text-decoration:none;
+	color:#6b6b6b;
+}
+.clear {
+	clear:both;
+}
+.wrap {
+	width:990px;
+	margin:0 auto;
+}
+#header, #image, #content, #footer {
+	width:100%;
+}
+/*****header部分样式*****/
+#header {
+	height:39px;
+	border-bottom:1px solid #e0e0e0;
+	padding-top:11px;
+}
+#logo {
+	width:152px;
+	height:27px;
+	background:url("../images/iconlist_1.png");
+	float:left;
+}
+#nav {
+	float:right;
+}
+#nav ul {
+	float:left;
+}
+#nav ul li {
+	float:left;
+}
+#nav ul li a {
+	padding:5px 20px 15px;
+	display:block;
+}
+#nav ul li.current {
+	border-bottom:3px solid #f05157;
+}
+#down {
+	float:left;
+	position:relative;
+}
+#down>a {
+	display:block;
+	float:left;
+	width:86px;
+	height:26px;
+	background:url("../images/iconlist_1.png");
+}
+#down #android {
+	background-position:-180px 0;
+	margin-left:15px;
+}
+#down #android:hover {
+	background-position:-280px 0;
+}
+#android_pop {
+	position:absolute;
+	width:180px;
+	height:210px;
+	background:url("../images/iconlist_1.png") -420px -360px;
+	top:39px;
+	left:10px;
+	display:none;
+}
+#down #ios {
+	background-position:-380px 0;
+	margin-left:11px;
+}
+/*****footer部分样式*****/
+#footer {
+	height:320px;
+	background:#363636;
+	color:#969696;
+}
+#footer a {
+	color:#969696;
+}
+#footer .up {
+	height:165px;
+	padding-top:80px;
+	width:775px;
+	margin:0 auto;
+}
+.f_link {
+	margin-right:60px;
+	float:left;
+}
+.f_link h2 {
+	font-size:24px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.f_link ul li {
+	height:26px;
+	line-height:26px;
+}
+.up span {
+	width:200px;
+	height:99px;
+	background:url("../images/iconlist_1.png") -220px -360px;
+	float:left;
+	margin-right:20px;
+	margin-top:10px;
+}
+.up .weixin {
+	background-position:0 -360px;
+}
+#footer .down {
+	text-align:center;
+}
+/*****页面置顶部分样式*****/
+#up {
+	width:80px;
+	height:80px;
+	background:url("../images/iconlist_1.png") 0 -480px;
+	position:fixed;
+	bottom:60px;
+	right:15px;
+	display:none;
+}
+#up:hover {
+	background-position:-81px -480px;
+}

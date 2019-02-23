@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	body{font:12px/20px "微软雅黑"; background:#333;}
+	ul li{list-style:none;}
+	a{text-decoration:none;}
+	/*一级菜单*/
+	.nav{width:1000px; height:30px; border:1px solid #fff; border-radius:3px; background:linear-gradient(#999,#ccc); margin:100px auto;}
+	.nav ul li{width:198px; height:28px; float:left; border:1px solid #666; border-radius:3px;}
+	.nav ul li a{width:198px; height:28px; display:block; color:#000; text-align:center; line-height:30px; font-size:14px;}
+	.nav ul li .title:hover{color:#fff; background:linear-gradient(#fff,#000)}
+	/*二级菜单*/
+	.nav ul li ul.n_menu{margin:2px 0;}
+	.nav ul li ul.n_menu li{width:198px; height:35px; border:1px solid #ccc; margin:2px 0; color:#fff; opacity:0; transform:rotateY(180deg);transition:All 0.8s;}
+	.nav ul li ul.n_menu li:hover{box-shadow:0 0 20px #fff;}
+	.nav ul li ul.n_menu li a{width:198px; height:28px; display:block; color:#fff; text-align:center; line-height:35px; font-size:14px; transition:all 0.3s ease-in-out;}
+	.nav ul li ul.n_menu li a:hover{color:#2693ff;}
+	/*鼠标经过产生的效果*/
+	.nav ul li:hover ul.n_menu li{opacity:1;transform:rotateY(0deg);}
+	/*延迟加载的时间*/
+    .nav ul li:hover ul.n_menu li:nth-child(1){-webkit-transition-delay:0ms;}
+	.nav ul li:hover ul.n_menu li:nth-child(2){-webkit-transition-delay:50ms;}
+	.nav ul li:hover ul.n_menu li:nth-child(3){-webkit-transition-delay:100ms;}
+	.nav ul li:hover ul.n_menu li:nth-child(4){-webkit-transition-delay:150ms;}
+	.nav ul li:hover ul.n_menu li:nth-child(5){-webkit-transition-delay:200ms;}
+
+  </style>
+ </head>
+ <body>
+	<div class="nav">
+		<ul>
+			<li>
+				<a class="title" href="javascript:void(0)">首页</a>
+				<ul class="n_menu">
+					<li><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">首页</a></li>
+					<li><a href="javascript:void(0)">首页</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="title" href="javascript:void(0)">服饰</a>
+				<ul class="n_menu">
+					<li><a href="javascript:void(0)">服饰</a></li>
+					<li><a href="javascript:void(0)">服饰</a></li>
+					<li><a href="javascript:void(0)">服饰</a></li>
+					<li><a href="javascript:void(0)">服饰</a></li>
+					<li><a href="javascript:void(0)">服饰</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="title" href="javascript:void(0)">家具</a>
+				<ul class="n_menu">
+					<li><a href="javascript:void(0)">家具</a></li>
+					<li><a href="javascript:void(0)">家具</a></li>
+					<li><a href="javascript:void(0)">家具</a></li>
+					<li><a href="javascript:void(0)">家具</a></li>
+					<li><a href="javascript:void(0)">家具</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="title" href="javascript:void(0)">书籍</a>
+				<ul class="n_menu">
+					<li><a href="javascript:void(0)">书籍</a></li>
+					<li><a href="javascript:void(0)">书籍</a></li>
+					<li><a href="javascript:void(0)">书籍</a></li>
+					<li><a href="javascript:void(0)">书籍</a></li>
+					<li><a href="javascript:void(0)">书籍</a></li>
+				</ul>
+			</li>
+			<li>
+				<a class="title" href="javascript:void(0)">护肤</a>
+				<ul class="n_menu">
+					<li><a href="javascript:void(0)">护肤</a></li>
+					<li><a href="javascript:void(0)">护肤</a></li>
+					<li><a href="javascript:void(0)">护肤</a></li>
+					<li><a href="javascript:void(0)">护肤</a></li>
+					<li><a href="javascript:void(0)">护肤</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+ </body>
+</html>

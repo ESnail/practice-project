@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>css-白云动画</title>
+  <style type="text/css">
+	html{
+		height:100%;
+    }
+	body{
+		width:100%;
+		height:100%;
+		background:url("images/cloud.png") repeat-x center bottom;
+		margin:0;
+		animation:cloud 10s linear infinite;
+		overflow:hidden;
+	}
+	@keyframes cloud{
+		from{
+			background-position:100% bottom;
+		}
+		to{
+			background-position:0 bottom;
+		}
+	}
+	#cloud1{
+		width:170px;
+		height:125px;
+		background:url(images/object.png) no-repeat -371px 0px;
+		position:relative;
+		animation:cloud1 30s linear infinite;
+	}
+	@keyframes cloud1{
+		from{
+			left:0%;
+			top:0;
+			transform:scale(0.7);
+			opacity:0.7;
+		}
+		60%{
+			left:40%;
+			top:15%;
+			transform:scale(1.2);
+			opacity:1;
+		}
+		to{
+			left:100%;
+			top:5%;
+			transform:scale(0.5);
+			opacity:0.7;
+		}
+	}
+	#bird{
+		width:110px;
+		height:100px;
+		background:url("images/bird.gif") no-repeat;
+		position:relative;
+		animation:bird 15s ease-in-out infinite;
+		
+	}
+	@keyframes bird{
+		from{
+			left:80%;
+			top:50%;
+			transform:scale(0.5);
+			opacity:0.7;
+		}
+		50%{
+			left:40%;
+			top:20%;
+			transform:scale(1.2);
+			opacity:1;
+		}
+		to{
+			left:-10%;
+			top:0;
+			transform:scale(0.7);
+			opacity:0.7;
+		}
+	}
+  </style>
+ </head>
+ <body>
+	<div id="cloud1"></div>
+	<div id="bird"></div>
+ </body>
+</html>

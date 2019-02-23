@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8"/>
+  <meta name="Keywords" content="编程百科"/>
+  <meta name="Description" content="编程百科 - 开发者的百科全书"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1"/>
+  <title>编程百科</title>
+  <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="iconfont/iconfont.css">
+  <style type="text/css">
+	*{margin:0; padding:0;}
+	html,body{font:12px/20px "微软雅黑"; background:linear-gradient(#fff,#d1d1d1);}
+	ul li{list-style:none;}
+	a{text-decoration:none;}
+
+	/*header start*/
+	.header{width:100%; height:50px; background:linear-gradient(#666,#111); position:fixed; top:0; z-index:10; overflow:hidden;}
+	.header .h_box{width:80%; height:100%; margin:0 auto;}
+	.header .h_box .logo{width:63%; float:left;}
+	.header .h_box .logo a{display:inline-block; padding:6px 0; float:left;}
+	.header .h_box .logo .search{height:40px; float:left; padding:9px 0; margin-left:25px;}
+	.header .h_box .logo .search input{height:32px; width:270px; border-radius:5px; padding:0 10px; border:none; box-shadow:1px 1px 3px #fff;}
+	.header .h_box .logo .search a{width:54px; height:32px; display:inline-block; color:#333; background:#fff; float:right; padding:0; margin-left:5px; border-radius:5px; text-align:center; line-height:32px; border:none; box-shadow:1px 1px 3px #fff;}
+	.header .h_box .logo .search a:hover{background:linear-gradient(#fff,#ccc);}
+	.header .h_box .lr{width:37%; height:100%; float:left;}
+	.header .h_box .lr a{display:inline-block; padding:15px 0 15px 25px; color:#ccc; float:right; font-size:14px;}
+	.header .h_box .lr a:hover{color:#fff; text-decoration:underline;}
+	/*header end*/
+
+	/*container start*/
+	.container{width:80%; margin:0 auto; padding-top:50px;}
+		/*c_left start*/
+	.container .c_left{width:63%; float:left; background:linear-gradient(#fff,#ddd);}
+	.container .c_left ul li{border-bottom:1px dotted #999; padding:10px 0;}
+	.container .c_left ul li a{display:inline-block; line-height:40px; color:#000; font-size:24px; font-weight:bold;}
+	.container .c_left ul li a:hover{color:#48a4ff; text-decoration:underline;}
+	.container .c_left ul li p{line-height:30px; font-size:14px; text-align:justify;}
+	.container .c_left ul li p span{display:inline-block; margin-right:5px; padding:0 15px; background:#ddeeff; border-radius:12px; line-height:24px; transition:all 0.3s ease-in-out;}
+	.container .c_left ul li p span:hover{background:#7bbdff; cursor:pointer;}
+	.container .c_left ul li p i{font-style:normal;}
+	.container .c_left ul li p i:hover{text-decoration:underline;}
+	.container .c_left ul li p a.author{font-size:14px; color:#006a92;}
+	.container .c_left ul li p a.author:hover{color:red; text-decoration:underline;}
+		/*c_left end*/
+		/*c_right start*/
+	.container .c_right{width:32%; float:left; background:linear-gradient(#fff,#ddd); margin-left:5%;}
+	.container .c_right ul li{padding:10px 0 0 10px;}
+	.container .c_right ul li p{border-bottom:5px solid #aaa; font-size:18px; font-weight:700; color:#666; line-height:40px;}
+	.container .c_right ul li p .iconfont{display:inline-block; margin-left:5px; font-size:16px; color:#0080ff;}
+	.container .c_right ul li p .iconfont:hover{color:#666;}
+	.container .c_right ul li .list{padding:10px 0 0 0; list-style:circle;}
+	.container .c_right ul li .list li{height:26px; padding:0 10px; line-height:26px; list-style:disc inside; color:#48a4ff; font-size:14px; overflow:hidden;}
+	.container .c_right ul li .list li a{width:100%; display:block; color:#666; font-size:14px; font-weight:600; }
+	.container .c_right ul li .list li a:hover{color:#48a4ff; text-decoration:underline;}
+	.container .c_right ul .weibo .w_img{display:block; margin:30px 0 0 10px; float:left;}
+	.container .c_right ul .weibo .w_des{display:block; margin:30px 0 0 10px; float:left;}
+	.container .c_right ul .weibo .w_des span{color:#666;}
+	.container .c_right ul .weibo .w_des span a{color:#333; font-size:14px;}
+	.container .c_right ul .weibo .w_des span a:hover{text-decoration:underline;}
+	.container .c_right ul .weibo .w_des .add{width:60px; height:25px; text-align:center; line-height:25px; display:block; color:#fff; background:linear-gradient(#ff6060,#c80000); border:1px solid #fff; box-shadow:0 0 1px #ff0000;  margin-top:5px;}
+	.container .c_right ul .weibo .w_des .add:hover{background:linear-gradient(#c80000,#ff6060);}
+	.container .c_right ul .like .slidebox{width:280px; height:240px; border:1px solid #fff; background:#ddd; margin:0 auto; padding:5px; margin:20px auto;}
+	.container .c_right ul .like .slidebox .l_show{width:272px; height:200px; margin:0 auto;}
+	.container .c_right ul .like .slidebox .l_show img{width:272px;}
+	.container .c_right ul .like .slidebox .l_list{width:272px; margin:0 auto;}
+	.container .c_right ul .like .slidebox .l_list li{width:65px; height:40px; float:left; margin:0 2px; padding:0; background:#fff;}
+	.container .c_right ul .like .slidebox .l_list li:first-child{margin-left:0;}
+	.container .c_right ul .like .slidebox .l_list li:last-child{margin-right:0;}
+	.container .c_right ul .like .slidebox .l_list li img{width:65px; height:40px; border:none; background:#fff; opacity:0.7; transition:all 0.5s ease;}
+	.container .c_right ul .like .slidebox .l_list li img:hover{cursor:pointer; border:1px solid #111; opacity:1; transform:scale(0.8); transition:all 0.5s ease;}
+		/*c_right end*/
+	/*container end*/
+	
+	/*pagenum start*/
+	#pagenum{width:80%; overflow:hidden; margin:30px auto;}
+	#pagenum ul{width:443px; margin:0px auto;}
+	#pagenum ul li{float:left; width:34px; height:34px; border:1px solid #337ab7; border-right:none; text-align:center; line-height:34px; font-size:14px;}
+	#pagenum ul li a{display:block; width:100%; height:100%;}
+	#pagenum ul li:first-child{border-top-left-radius:3px; border-bottom-left-radius:3px; background:#337ab7;}
+	#pagenum ul li:first-child a{color:white;}
+	#pagenum ul li:last-child{border-right:1px solid #337ab7; border-top-right-radius:3px; border-bottom-right-radius:3px;}
+	#pagenum ul li:not(:first-child):hover{background:#bdd7ec;}
+	/*pagenum end*/
+
+	/*footer start*/
+	.footer{width:80%; height:100px; background:linear-gradient(#eee,#ccc); margin:0 auto; padding-top:30px; border-top:1px solid #fff;}
+	.footer p{text-align:center; line-height:25px; color:#555;}
+	.footer p a{color:#555;}
+	.footer p a:hover{color:#222; text-decoration:underline;}
+	/*footer end*/
+	
+	/*top(置顶) start*/
+	.top{width:70px; height:70px; position:fixed; bottom:40px; right:5%; display:none;}
+	.top .iconfont{display:block; font-size:40px; text-align:center; line-height:70px;}
+	.top .iconfont:hover{cursor:pointer; color:#0080ff; font-size:50px;}
+	/*top(置顶) end*/
+
+	/*清除浮动*/
+	.clear{clear:both;}
+  </style>
+ </head>
+ <body>
+	<!--header start-->
+	<div class="header">
+		<div class="h_box">
+			<div class="logo">
+				<a href="javascript:void(0)"><img src="img/logo.png"/></a>
+				<p class="search">
+					<input type="text" placeholder="Search"/><a href="javascript:void(0)">搜索</a>
+				</p>
+			</div>
+			<p class="lr">
+				<a href="javascript:void(0)">注册</a>
+				<a href="javascript:void(0)">登录</a>
+			</p>
+	    </div>
+		<div class="clear"></div>
+	</div>
+	<!--header end-->
+
+	<!--container start-->
+	<div class="container">
+		<!--c_left start-->
+		<div class="c_left">
+			<ul>
+				<li>
+					<a href="javascript:void(0)">CentOS6.7 下 Hadoop2.7.1 + Spark1.5 环境搭建</a>
+					<p>CentOS6.7 下搭建 Hadoop2.7.1 + Spark1.5 环境</p>
+					<p><span>centos</span> <span>spark</span> <span>hadoop</span> <span>大数据</span> <span>yarn</span> <span>hdfs</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-09-23 17:29</i> | <i>27次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">C# 语法小记</a>
+					<p>C# 语法小记</p>
+					<p><span>语法小记</span> <span>csharp</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-09-17 11:12</i> | <i>36次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Java 语法小记</a>
+					<p>Java 语法小记</p>
+					<p><span>语法小记</span> <span>java</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-09-17 10:22</i> | <i>49次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Java map详解 - 用法、遍历、排序、常用API等</a>
+					<p>java.util 中的集合类包含 Java 中某些最常用的类。最常用的集合类是 List 和 Map。Map 提供了一个更通用的元素存储方法。Map 集合类用于存储元素对（称作“键”和“值”），其中每个键映射到一个值。本文主要介绍java map的初始化、用法、map的四种常用的遍历方式、map的排序以及常用api。</p>
+					<p><span>java</span> <span>java map</span> <span>java map 遍历</span> <span>java map用法</span> <span>java map 排序</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-08-03 15:45</i> | <i>132次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Java下载 - 最新版、历史版本的官方下载地址及教程</a>
+					<p>Java下载 最新版、历史版本的官方下载地址</p>
+					<p><span>java</span> <span>java下载</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-07-31 17:29</i> | <i>82次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Android自定义控件onMeasure、onLayout介绍</a>
+					<p>Android自定义控件onMeasure、onLayout介绍</p>
+					<p><span>android</span> <span>java下载</span></p>
+					<p><a class="author" href="javascript;">小刚<a> <i>发表于 2015-07-21 17:21</i> | <i>134次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Java环境变量设置</a>
+					<p>Java环境变量设置</p>
+					<p><span>java</span> <span>环境变量设置</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-07-30 13:48</i> | <i>90次阅读</i></p>
+				</li>
+				<li>
+					<a href="javascript:void(0)">Java 数组详解 - 用法、遍历、排序、实用API等</a>
+					<p>数组，就是相同数据类型的元素按一定顺序排列的集合，就是把有限个类型相同的变量用一个名字命名，然后用编号区分他们的变量的集合，这个名字称为数组名，编号称为下标。组成数组的各个变量称为数组的分量，也称为数组的元素，有时也称为下标变量。数组是在程序设计中，为了处理方便， 把具有相同类型的若干变量按有序的形式组织起来的一种形式。这些按序排列的同类数据元素的集合称为数组。</p>
+					<p><span>java数组</span> <span>一维数组</span> <span>二维数组</span> <span>数组排序</span></p>
+					<p><a class="author" href="javascript;">XSoftlab</a> <i>发表于 2015-07-28 23:20</i> | <i>101次阅读</i></p>
+				</li>
+			</ul>
+		</div>
+		<!--c_left end-->
+		<!--c_right start-->
+		<div class="c_right">
+			<ul>
+				<li>
+					<p>本月热门<a  class="iconfont" href="javascript:void(0)">&#xf0038;</a></p>
+					<ul class="list">
+						<li><a href="javascript:void(0)">Java多种方式读取文件内容</a></li>
+						<li><a href="javascript:void(0)">Java 语法小记</a></li>
+						<li><a href="javascript:void(0)">CentOS6.7 下搭建 Hadoop2.7.1 单机伪分布</a></li>
+						<li><a href="javascript:void(0)">C# 语法小记</a></li>
+						<li><a href="javascript:void(0)">CentOS6.7 下 Hadoop2.7.1 + Spark1.5 环</a></li>
+					</ul>
+				</li>
+				<li>
+					<p>本月精华<a  class="iconfont" href="javascript:void(0)">&#xf0038;</a></p>
+					<ul class="list">
+						<li><a href="javascript:void(0)">CentOS6.7 下搭建 Hadoop2.7.1 单机伪分布式环境</a></li>
+						<li><a href="javascript:void(0)">CentOS6.7 下 Hadoop2.7.1 + Spark1.5 环境搭建</a></li>
+						<li><a href="javascript:void(0)">Java 语法小记</a></li>
+						<li><a href="javascript:void(0)">C# 语法小记</a></li>
+						<li><a href="javascript:void(0)">Java多种方式读取文件内容</a></li>
+					</ul>
+				</li>
+				<li class="weibo">
+					<p>官方微博</p>
+					<span class="w_img"><img src="img/weibo.jpg"/></span>
+					<span class="w_des">
+						<span><a href="javascript:void(0)">XSoftlab</a> 北京 海淀区</span>
+						<a class="add" href="javascript:void(0)">+ 加关注</a>
+					</span>
+					<div class="clear"></div>
+				</li>
+				<li class="like">
+					<p>猜你喜欢</p>
+					<div class="slidebox">
+						<div class="l_show"><img src="img/1.jpg"/></div>
+						<ul class="l_list">
+							<li><img src="img/1.jpg"/></li>
+							<li><img src="img/2.jpg"/></li>
+							<li><img src="img/3.jpg"/></li>
+							<li><img src="img/4.jpg"/></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+		<!--c_right end-->
+	</div>
+	<!--container end-->
+	
+	<!--pagenum start-->
+	<div id="pagenum">
+		<ul>
+			<li class="current"><a href="javascript:;" title="第1页">1</a></li>
+			<li><a href="javascript:;" title="第2页">2</a></li>
+			<li><a href="javascript:;" title="第3页">3</a></li>
+			<li><a href="javascript:;" title="第4页">4</a></li>
+			<li><a href="javascript:;" title="第5页">5</a></li>
+			<li><a href="javascript:;" title="第6页">6</a></li>
+			<li><a href="javascript:;" title="第7页">7</a></li>
+			<li><a href="javascript:;" title="第8页">8</a></li>
+			<li><a href="javascript:;" title="第9页">9</a></li>
+			<li><a href="javascript:;" title="第10页">10</a></li>
+			<li><a href="javascript:;" title="下1页">&gt;</a></li>
+			<li><a href="javascript:;" title="最后1页">&gt;&gt;</a></li>
+		</ul>
+	</div>
+	<!--pagenum end-->
+
+	<!--footer start-->
+	<div class="footer">
+		<p><a href="javascript:void(0)">京ICP备13053109号</a></p>
+		<p>Copyright© 2015 <a href="javascript:void(0)">xsoftlab.net</a> | 联系邮箱:<a href="javascript:void(0)"> service@xsoftlab.net</a> | 官方QQ群: 384161896</p>
+		<p>版权声明：如文章未声明转载，则为编程百科用户原创文章，未经编程百科及作者允许不得转载。</p>
+	</div>
+	<!--footer end-->
+	
+	<!--top(置顶) start-->
+	<div class="top"><i class="iconfont">&#xe62a;</i></div>
+	<!--top(置顶) end-->
+
+	<!--js 脚本-->
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			//滑动切换图片
+			$(".l_list li").hover(function(){
+				var li_src = $(this).find("img").attr("src");
+				$(".l_show").find("img").attr("src",li_src);
+			});
+
+			//网页置顶
+			//1.鼠标滚轮事件
+			$(window).scroll(function(){
+				if($(window).scrollTop()>100){
+					$(".top").fadeIn("slow");
+				}else{
+					$(".top").fadeOut("slow");
+				}
+			});
+			//2.置顶图标置顶单击事件
+			$(".top").click(function(){
+				$('html,body').animate({scrollTop: '0px'}, 800);
+			})
+		})
+	</script>
+ </body>
+</html>

@@ -1,0 +1,138 @@
+/* CSS Document */
+#header, #image, #content, #footer {
+	width:100%;
+}
+
+/*****image部分样式*****/
+#image {
+	height:530px;
+	background:url("../images/bg.jpg") no-repeat center center #dedede;
+	padding-top:120px;
+}
+#image .title {
+	width:453px;
+	height:51px;
+	background:url("../images/iconlist_1.png") -2px -40px;
+	margin:0 auto;
+}
+#image .summary {
+	width:432px;
+	height:17px;
+	background:url("../images/iconlist_1.png") -482px -3px;
+	margin:0 auto;
+	margin-top:30px;
+}
+#product {
+	margin:0 auto;
+	width:772px;
+	position:relative;
+	margin-top:90px;
+}
+#product li {
+	float:left;
+	position:absolute;
+}
+/*
+#product .p1 {
+	left:0px;
+}
+#product .p2 {
+	left:149px;
+}
+#product .p3 {
+	left:298px;
+}
+#product .p4 {
+	left:447px;
+}
+#product .p5 {
+	left:596px;
+}
+*/
+#product li i, #product li s {
+	display:block;
+}
+#product li i {
+	width:173px;
+	height:173px;
+	background:url("../images/iconlist_1.png") -0px -101px;
+	position:relative;
+	z-index:2;
+}
+#product .p2 i {
+	background-position:-180px -101px;
+}
+#product .p3 i {
+	background-position:-360px -101px;
+}
+#product .p4 i {
+	background-position:-540px -101px;
+}
+#product .p5 i {
+	background-position:-720px -101px;
+}
+#product li s {
+	width:173px;
+	height:20px;
+	background:url("../images/iconlist_1.png") -0px -280px;
+	position:relative;
+	top:-10px;
+	z-index:1;
+}
+/*****content部分样式*****/
+#description {
+	padding-top:105px;
+	height:595px;
+}
+#description .title {
+	background:url("../images/iconlist_1.png") -480px -40px;
+	margin:0 auto;
+	width:328px;
+	height:40px;
+}
+#description .summary {
+	background:url("../images/iconlist_1.png") 0px -300px;
+	margin:0 auto;
+	width:955px;
+	height:54px;
+	margin-top:34px;
+}
+#description .image {
+	background:url("../images/image.jpg") no-repeat;
+	margin:0 auto;
+	width:700px;
+	height:298px;
+	margin-top:50px;
+}
+#call {
+	background:url("../images/bg2.jpg") center center no-repeat;
+	padding-top:100px;
+	height:600px;
+}
+#call span {
+	display:block;
+	width:829px;
+	height:533px;
+	background:url("../images/iconlist_2.png");
+}
+#notice {
+	height:700px;
+	background:url("../images/tixing.jpg") no-repeat center center;
+}
+#position {
+	width:100%;
+	padding-top:100px;
+	height:600px;
+	background:url("../images/bg3.jpg") no-repeat center center;
+}
+#position span {
+	float:right;
+	width:813px;
+	height:533px;
+	background:url("../images/iconlist_2.png") 0 -560px;
+}
+#icons {
+	height:595spx;
+	background:url("../images/icons.gif") no-repeat center center;
+}
+
